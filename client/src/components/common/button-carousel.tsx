@@ -1,10 +1,6 @@
 import { ArrowRightAlt } from "@mui/icons-material";
+import { type ButtonCarouselProps } from "../../types";
 
-interface ButtonCarouselProps {
-  onClick: () => void;
-  direction: "left" | "right";
-  ariaLabel: string;
-}
 
 const ButtonCarousel = ({ onClick, direction, ariaLabel }: ButtonCarouselProps) => {
   const positionClass = direction === "left" ? "left-10" : "right-10";
