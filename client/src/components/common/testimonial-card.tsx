@@ -10,13 +10,14 @@ const TestimonialCard = ({
   rating,
 }: Testimonial) => {
   return (
-    <div className="relative rounded-2xl overflow-hidden mx-auto   w-[500px] h-[700px] flex flex-col justify-end">
-      <img
-        src={backgroundImage}
-        alt="Background"
-        className="absolute inset-0 w-full h-full object-cover scale-110"
-      />
-      <div className="relative z-10 bg-white rounded-3xl p-8 w-[450px] mx-auto mb-8 flex flex-col items-center shadow-xl">
+    <div className="">
+      <div className="relative rounded-2xl   overflow-hidden mx-auto  w-[300px] h-[500px] md:w-[350px] md:h-[500px] lg:w-[480px] lg:h-[700px] xl:w-[450px] xl:h-[700px] 2xl:w-[500px] 2xl:h-[700px]   flex flex-col justify-end">
+        <img
+          src={backgroundImage}
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover "
+        />
+        <div className="relative z-10 bg-white rounded-3xl p-8 w-[250px] md:w-[300px] lg:w-[450px] xl:w-[400px] 2xl:w-[450px] mx-auto mb-8 flex flex-col items-center shadow-xl">
         <div className="mb-6 -mt-16">
           <div className="w-24 h-24 rounded-full p-2.5 bg-white">
             <img
@@ -48,6 +49,7 @@ const TestimonialCard = ({
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };

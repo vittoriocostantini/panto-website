@@ -10,9 +10,21 @@ import {
 } from "../../constants";
 import { type Product } from "../../types";
 import { type ProductCategory } from "../../constants";
+import { useResponsiveSlides } from "../../hooks/use-responsive-slides";
+
 const ProductsContainer = () => {
   const [selectedCategory, setSelectedCategory] =
     useState<ProductCategory>("chair");
+
+  const { slidesToShow } = useResponsiveSlides({
+    initialSlides: 4,
+    rules: [
+      { maxWidth: 640, slidesToShow: 1 },
+      { maxWidth: 1024, slidesToShow: 2 },
+      { maxWidth: 1280, slidesToShow: 3 },
+    ],
+    fallbackSlides: 4,
+  });
 
   const productsByCategory: Record<ProductCategory, Product[]> = {
     chair: productsChair,
@@ -24,6 +36,7 @@ const ProductsContainer = () => {
   const currentProducts = productsByCategory[selectedCategory] ?? [];
 
   const carouselItems = currentProducts.map((product) => (
+
     <CardProducts
       key={product.id}
       category={product.category}
@@ -35,7 +48,7 @@ const ProductsContainer = () => {
   ));
 
   return (
-    <section className="py-16 bg-[#F7F7F7]">
+    <section className="py-16 gray-gradient-product">
       <div className="justify-center items-center text-center">
         <h2 className="text-5xl font-bold mb-4">Best Selling Product</h2>
         <SelectBarProduct
@@ -45,6 +58,9 @@ const ProductsContainer = () => {
       </div>
       <CarouselSlider
         items={carouselItems}
+        settings={{
+          slidesToShow,
+        }}
         emptyMessage="No hay productos disponibles para esta categoría."
       />
       <div className="flex items-center justify-center mt-8">

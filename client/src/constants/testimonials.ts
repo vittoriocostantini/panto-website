@@ -5,60 +5,66 @@ import review3Image from "../assets/reviews/review-3.png";
 import review4Image from "../assets/reviews/review-4.jpeg";
 import review5Image from "../assets/reviews/review-5.jpeg";
 import review6Image from "../assets/reviews/review-6.jpeg";
+import profile1Image from "../assets/reviews/avatars/avatar-1.png";
+import profile2Image from "../assets/reviews/avatars/avatar-2.png";
+import profile3Image from "../assets/reviews/avatars/avatar-3.png";
+import profile4Image from "../assets/reviews/avatars/avatar-4.png";
+import profile5Image from "../assets/reviews/avatars/avatar-5.png";
+import profile6Image from "../assets/reviews/avatars/avatar-6.png";
 
 export const testimonialsData: Testimonial[] = [
   {
     backgroundImage: review1Image,
-    profileImage: review1Image,
-    name: "Bang Upin",
-    title: "Pedagang Asongan",
+    profileImage: profile1Image,
+    name: "Mia Lestari",
+    title: "Architect and Interior Designer",
     testimonial:
-      "Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal",
+      "Thank you for the best service, I'm very satisfied with the product and the service",
     rating: 4,
   },
   {
     backgroundImage: review2Image,
-    profileImage: review2Image,
-    name: "Ibuk Sukijan",
-    title: "Ibu Rumah Tangga",
+    profileImage: profile2Image,
+    name: "John Doe",
+    title: "Homemaker",
     testimonial:
-      "Makasih Panto, ruang tamu saya jadi jadi sangat homey dan keluarga betah",
+      "Thanks Panto, my living room became very homey and my family loves it",
     rating: 5,
   },
   {
     backgroundImage: review3Image,
-    profileImage: review3Image,
-    name: "Mpok Ina",
-    title: "Karyawan Swasta",
+    profileImage: profile3Image,
+    name: "Maria Ruiz",
+    title: "Independent Worker",
     testimonial:
-      "Sempet kehabisan duit pas beli furniture, untung ada Panto yang bisa dicicil",
+      "I ran out of money when buying furniture, luckily Panto offers installments",
     rating: 5,
   },
   {
     backgroundImage: review4Image,
-    profileImage: review4Image,
-    name: "Mpok Ina",
-    title: "Karyawan Swasta",
+    profileImage: profile4Image,
+    name: "Steven Duran",
+    title: "Furniture Designer",
     testimonial:
-      "Sempet kehabisan duit pas beli furniture, untung ada Panto yang bisa dicicil",
+      "I was short on cash when buying furniture, fortunately Panto has payment plans",
     rating: 5,
   },
   {
     backgroundImage: review5Image,
-    profileImage: review5Image,
-    name: "Mpok Ina",
-    title: "Karyawan Swasta",
+    profileImage: profile5Image,
+    name: "Jane Orellana",
+    title: "Interior Designer",
     testimonial:
-      "Sempet kehabisan duit pas beli furniture, untung ada Panto yang bisa dicicil",
+      "I didn't have enough money for furniture, but Panto's installment option saved me",
     rating: 5,
   },
   {
     backgroundImage: review6Image,
-    profileImage: review6Image,
-    name: "Mpok Ina",
-    title: "Karyawan Swasta",
+    profileImage: profile6Image,
+    name: "Jesica Lorena",
+    title: "Private Employee",
     testimonial:
-      "Sempet kehabisan duit pas beli furniture, untung ada Panto yang bisa dicicil",
+      "I was running low on funds for furniture, thank goodness Panto allows installments",
     rating: 5,
   },
 ];

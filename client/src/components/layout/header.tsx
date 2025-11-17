@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   return (
     <header className="fixed w-full z-11  text-white px-6 py-4  bg-black/20 backdrop-blur-md">
       <div className=" mx-10 flex items-center justify-between">
-        <div className="shrink-0">
+        <div className="shrink-0 ">
           <img src={logoPanto} alt="Panto" className="h-8 w-auto" />
         </div>
 

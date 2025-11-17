@@ -2,10 +2,20 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
+body,
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
 
-body, html {
-scroll-behavior: smooth;
-overscroll-behavior-y: none;
-overflow-x: hidden;
-font-family: 'Montserrat', sans-serif;
+.gray-gradient-product {
+  background: #ffffff;
+  background: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(230, 230, 230) 100%,
+    rgb(250, 249, 249) 55%
+  );
 }

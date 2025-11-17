@@ -13,12 +13,12 @@ const AboutUs = () => {
             <img
               src={experienceImage}
               alt="Modern living space with minimalist design"
-              className="w-full h-auto rounded-3xl object-cover "
+              className="w-full h-auto rounded-3xl object-cover"
             />
           </div>
         </div>
 
-        <div className="w-full flex flex-col justify-center space-y-6 max-w-3xl">
+        <div className="w-full flex flex-col justify-center space-y-6 max-w-3xl text-center lg:text-left">
           <p className="text-orange-500 font-semibold text-sm uppercase tracking-wide">
             EXPERIENCES
           </p>
@@ -33,7 +33,7 @@ const AboutUs = () => {
           </p>
           <a
             href="#"
-            className="text-orange-500 hover:text-orange-600 font-semibold inline-flex items-center gap-2 transition-colors text-lg mt-4"
+            className="text-orange-500 hover:text-orange-600 font-semibold inline-flex items-center gap-2 transition-colors text-lg mt-4 justify-center lg:justify-start"
           >
             More Info
             <ArrowRightAlt sx={{ fontSize: 30 }} />
@@ -42,7 +42,7 @@ const AboutUs = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12 items-center mx-auto mt-20">
-        <div className="w-full max-w-2xl relative">
+        <div className="w-full max-w2xl relative">
           <div className="relative">
             <img
               src={materialsImage}
@@ -52,7 +52,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="w-full flex flex-col  items-center justify-center max-w-xs">
+        <div className="w-full  flex-col  items-center justify-center max-w-xs  hidden xl:block">
           <div className="w-full">
             <img
               src={materials1Image}
@@ -69,7 +69,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="w-full flex flex-col justify-center space-y-6 max-w-3xl mx-10">
+        <div className="w-full flex flex-col justify-center space-y-6 max-w-3xl mx-10 text-center lg:text-left">
           <p className="text-orange-500 font-semibold text-sm uppercase tracking-wide">
             MATERIALS
           </p>
@@ -84,7 +84,7 @@ const AboutUs = () => {
           </p>
           <a
             href="#"
-            className="text-orange-500 hover:text-orange-600 font-semibold inline-flex items-center gap-2 transition-colors text-lg mt-4"
+            className="text-orange-500 hover:text-orange-600 font-semibold inline-flex items-center gap-2 transition-colors text-lg mt-4 justify-center lg:justify-start"
           >
             More Info
             <ArrowRightAlt sx={{ fontSize: 30 }} />
