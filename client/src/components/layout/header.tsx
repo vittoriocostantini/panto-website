@@ -6,23 +6,23 @@ interface HeaderLabels {
   href: string;
 }
 
-const defaultLabels: HeaderLabels[] = [
+const HeaderLabels: HeaderLabels[] = [
   { label: "Furniture", href: "/" },
   { label: "Shop", href: "/" },
   { label: "About Us", href: "/" },
   { label: "Contact", href: "/" },
 ];
 
-function Header({ labels = defaultLabels }: { labels: HeaderLabels[] }) {
+const Header: React.FC = () => {
   return (
-    <header className=" text-white px-6 py-4 bg-black/5">
+    <header className="fixed w-full z-10  text-white px-6 py-4  bg-black/20 backdrop-blur-md">
       <div className=" mx-10 flex items-center justify-between">
         <div className="shrink-0">
           <img src={logoPanto} alt="Panto" className="h-8 w-auto" />
         </div>
 
         <nav className="hidden md:flex items-center space-x-20 grow justify-center">
-          {labels.map((label) => (
+          {HeaderLabels.map((label) => (
             <a key={label.label} href={label.href} className="hover:text-gray-300 transition-colors">
               {label.label}
             </a>
