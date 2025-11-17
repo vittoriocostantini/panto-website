@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+
+body, html {
+scroll-behavior: smooth;
+overscroll-behavior-y: none;
+overflow-x: hidden;
+font-family: 'Montserrat', sans-serif;
+}
