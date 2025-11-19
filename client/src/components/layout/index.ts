@@ -3,6 +3,8 @@ export { default as Footer } from './footer';
 export { default as Header } from './header';
 export { default as Hero } from './hero';
 export { default as ProductsContainer } from './products-container';
+export { default as ProductList } from './product-list';
+export { default as ProductDetail } from './product-detail';
 export { default as SearchBar } from './search-bar';
 export { default as WhyChoosing } from './why-choosing';
 export { default as Testimonials } from './testimonials';
