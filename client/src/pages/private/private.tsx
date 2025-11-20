@@ -1,6 +1,6 @@
 import { RoutesWithNotFound } from "../../utils/";
 import { Route } from "react-router-dom";
-import { PrivateRoutes } from "../../models";
+import { PrivateRoutes } from "../../routes";
 import Cart from "./cart/cart";
 
 function Private() {

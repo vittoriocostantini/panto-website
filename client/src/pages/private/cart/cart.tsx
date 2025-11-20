@@ -4,7 +4,7 @@ import { getProductById } from "../../../utils/products-list";
 import { type Product } from "../../../types";
 import { useNavigate } from "react-router-dom";
 import { CardCartProduct } from "../../../components/common";
-import { PublicRoutes } from "../../../models";
+import { PublicRoutes } from "../../../routes";
 // Datos de ejemplo para el diseño (después se conectará con el contexto/estado)
 const mockCartItems: Array<{ productId: string; quantity: number }> = [
   { productId: "1", quantity: 1 },

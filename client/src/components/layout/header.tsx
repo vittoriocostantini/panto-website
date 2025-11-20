@@ -1,12 +1,27 @@
-import { AccountCircle, LocalMall  } from "@mui/icons-material";
+import { AccountCircle, LocalMall, Logout } from "@mui/icons-material";
 import logoPanto from "../../assets/logo-panto.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context";
+import { PublicRoutes } from "../../routes";
+
 const Header: React.FC = () => {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigate(PublicRoutes.HOME);
+    } catch (error) {
+      console.error("Error al cerrar sesión:", error);
+    }
+  };
+
   return (
-    <header className="fixed w-full z-11  text-white px-6 py-4  bg-black/20 backdrop-blur-md">
-      <div className=" mx-10 flex items-center justify-between">
+    <header className="fixed w-full z-11 text-white px-6 py-4 bg-black/20 backdrop-blur-md">
+      <div className="mx-10 flex items-center justify-between">
         <button
-          className="shrink-0 "
+          className="shrink-0"
           onClick={() => (window.location.href = "/")}
         >
           <img
@@ -23,12 +38,22 @@ const Header: React.FC = () => {
           >
             <LocalMall fontSize="medium" />
           </Link>
-          <Link
-            to="/auth"
-            className="hover:text-gray-300 cursor-pointer hover:scale-110 transition-all duration-300"
-          >
-            <AccountCircle fontSize="medium" />
-          </Link>
+          {user ? (
+            <button
+              onClick={handleLogout}
+              className="hover:text-gray-300 cursor-pointer hover:scale-110 transition-all duration-300"
+              title="Cerrar sesión"
+            >
+              <Logout fontSize="medium" />
+            </button>
+          ) : (
+            <Link
+              to="/auth"
+              className="hover:text-gray-300 cursor-pointer hover:scale-110 transition-all duration-300"
+            >
+              <AccountCircle fontSize="medium" />
+            </Link>
+          )}
         </div>
       </div>
     </header>
