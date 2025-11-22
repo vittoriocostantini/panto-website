@@ -1,20 +1,39 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { CardProducts, CarouselSlider } from "../common";
 import { SelectBarProduct } from "../features/";
 import { ArrowRightAlt } from "@mui/icons-material";
-import {
-  productsChair,
-  productsBeds,
-  productsSofa,
-  productsLamps,
-} from "../../constants";
 import { type Product } from "../../types";
 import { type ProductCategory } from "../../constants";
 import { useResponsiveSlides } from "../../hooks/use-responsive-slides";
+import { addToCart } from "../../redux/slices/cart";
+import {
+  fetchProductsByCategory,
+  setSelectedCategory,
+  selectSelectedCategory,
+  selectCurrentProducts,
+  selectIsLoadingCurrent,
+  selectHasCachedProducts,
+} from "../../redux/slices/products";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 
 const ProductsContainer = () => {
-  const [selectedCategory, setSelectedCategory] =
-    useState<ProductCategory>("chair");
+  const dispatch = useAppDispatch();
+
+  // Selectores de Redux
+  const selectedCategory = useAppSelector(selectSelectedCategory);
+  const currentProducts = useAppSelector(selectCurrentProducts);
+  const loading = useAppSelector(selectIsLoadingCurrent);
+  const hasCachedProducts = useAppSelector((state) =>
+    selectHasCachedProducts(state, selectedCategory)
+  );
+
+  const handleAddToCart = (product: Product) => {
+    dispatch(addToCart(product));
+  };
+
+  const handleCategoryChange = (category: ProductCategory) => {
+    dispatch(setSelectedCategory(category));
+  };
 
   const { slidesToShow } = useResponsiveSlides({
     initialSlides: 4,
@@ -26,25 +45,15 @@ const ProductsContainer = () => {
     fallbackSlides: 4,
   });
 
-  const productsByCategory: Record<ProductCategory, Product[]> = {
-    chair: productsChair,
-    beds: productsBeds,
-    sofa: productsSofa,
-    lamp: productsLamps,
-  };
-
-  const currentProducts = productsByCategory[selectedCategory] ?? [];
+  // Fetch productos solo si no están cacheados
+  useEffect(() => {
+    if (!hasCachedProducts) {
+      dispatch(fetchProductsByCategory(selectedCategory));
+    }
+  }, [selectedCategory, hasCachedProducts, dispatch]);
 
   const carouselItems = currentProducts.map((product) => (
-
-    <CardProducts
-      key={product.id}
-      category={product.category}
-      name={product.name}
-      price={product.price}
-      rating={product.rating}
-      image={product.image}
-    />
+    <CardProducts key={product.id} {...product} onAddToCart={handleAddToCart} />
   ));
 
   return (
@@ -53,7 +62,7 @@ const ProductsContainer = () => {
         <h2 className="text-5xl font-bold mb-4">Best Selling Product</h2>
         <SelectBarProduct
           value={selectedCategory}
-          onChange={setSelectedCategory}
+          onChange={handleCategoryChange}
         />
       </div>
       <CarouselSlider
@@ -61,7 +70,11 @@ const ProductsContainer = () => {
         settings={{
           slidesToShow,
         }}
-        emptyMessage="No hay productos disponibles para esta categoría."
+        emptyMessage={
+          loading
+            ? "Cargando productos..."
+            : "No hay productos disponibles para esta categoría."
+        }
       />
       <div className="flex items-center justify-center mt-8">
         <h3 className="text-lg font-semibold text-orange-500 flex items-center gap-4 cursor-pointer">

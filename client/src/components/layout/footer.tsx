@@ -90,7 +90,7 @@ const Footer = () => {
 
         {/* Fila inferior */}
         <div className="border-t border-gray-300 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">Copyright © 2021</p>
+          <p className="text-gray-500 text-sm">the design is not my property - credits to: Kretya Studio©</p>
           <div className="flex gap-6">
             {bottomLinks.map((link) => (
               <a

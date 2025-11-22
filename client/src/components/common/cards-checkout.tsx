@@ -1,21 +1,20 @@
 import { Delete, Add, Remove } from "@mui/icons-material";
 import { type Product } from "../../types";
 
-interface CardCartProductProps {
+interface CardCheckoutProps {
   product: Product & { quantity: number };
   onQuantityChange: (productId: string, delta: number) => void;
   onRemove: (productId: string) => void;
 }
 
-const CardCartProduct = ({
+const CardCheckout = ({
   product,
   onQuantityChange,
   onRemove,
-}: CardCartProductProps) => {
+}: CardCheckoutProps) => {
   return (
     <div className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-shadow">
       <div className="flex flex-col sm:flex-row gap-4">
-
         <div className="bg-[#F5F5F5] rounded-xl w-full sm:w-32 h-32 flex items-center justify-center shrink-0">
           <img
             src={product.image}
@@ -30,7 +29,9 @@ const CardCartProduct = ({
             <h3 className="text-xl font-semibold text-[#1A1A1A] mb-2">
               {product.name}
             </h3>
-            <p className="text-2xl font-bold text-[#1A1A1A]">$ {product.price}</p>
+            <p className="text-2xl font-bold text-[#1A1A1A]">
+              $ {product.price}
+            </p>
           </div>
 
           <div className="flex items-center gap-4">
@@ -73,5 +74,4 @@ const CardCartProduct = ({
   );
 };
 
-export default CardCartProduct;
-
+export default CardCheckout;

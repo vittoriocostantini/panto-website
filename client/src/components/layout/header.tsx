@@ -3,9 +3,13 @@ import logoPanto from "../../assets/logo-panto.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context";
 import { PublicRoutes } from "../../routes";
+import { Badge } from "@mui/material";
+import { selectCartCount } from "../../redux/slices/cart";
+import { useAppSelector } from "../../redux/hooks";
 
 const Header: React.FC = () => {
   const { user, logout } = useAuth();
+  const cartCount = useAppSelector(selectCartCount);
   const navigate = useNavigate();
 
   const handleLogout = async () => {
@@ -22,7 +26,7 @@ const Header: React.FC = () => {
       <div className="mx-10 flex items-center justify-between">
         <button
           className="shrink-0"
-          onClick={() => (window.location.href = "/")}
+          onClick={() => navigate(PublicRoutes.HOME)}
         >
           <img
             src={logoPanto}
@@ -36,7 +40,9 @@ const Header: React.FC = () => {
             to="/cart"
             className="hover:text-gray-300 cursor-pointer hover:scale-110 transition-all duration-300"
           >
-            <LocalMall fontSize="medium" />
+            <Badge badgeContent={cartCount} color="primary">
+              <LocalMall fontSize="medium" />
+            </Badge>
           </Link>
           {user ? (
             <button
