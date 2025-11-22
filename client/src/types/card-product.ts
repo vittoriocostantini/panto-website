@@ -1,7 +1,5 @@
-export interface CardProductsProps {
-  category: string;
-  name: string;
-  price: number;
-  rating: number;
-  image: string;
+import type { Product } from "./product";
+
+export interface CardProductsProps extends Product {
+  onAddToCart?: (product: Product) => void;
 }

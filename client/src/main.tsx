@@ -4,13 +4,25 @@ import App from "./App.tsx";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/store/store";
-import { AuthProvider } from "./context/auth-context";
+import { AuthProvider } from "./context/";
+import { useLocation } from "react-router-dom";
+import { useLayoutEffect } from "react";
+const Wrapper = ({children}: {children: React.ReactNode}) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children
+}
+
 
 createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
     <BrowserRouter>
       <AuthProvider>
-        <App />
+        <Wrapper>
+          <App />
+        </Wrapper>
       </AuthProvider>
     </BrowserRouter>
   </Provider>

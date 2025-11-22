@@ -2,9 +2,8 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
-body,
-html {
-  scroll-behavior: smooth;
+body {
+
   overscroll-behavior-y: none;
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
@@ -18,4 +17,19 @@ html {
     rgb(230, 230, 230) 100%,
     rgb(250, 249, 249) 55%
   );
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
 }
