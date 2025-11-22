@@ -1,26 +1,15 @@
-import { configureStore } from "@reduxjs/toolkit"
-import { createSlice } from "@reduxjs/toolkit"
+import { configureStore } from "@reduxjs/toolkit";
+import cartReducer from "../slices/cart";
+import productsReducer from "../slices/products";
 
-// Reducer temporal placeholder - será reemplazado cuando agregues slices reales
-const placeholderSlice = createSlice({
-  name: "placeholder",
-  initialState: {},
-  reducers: {
-    // No hay acciones por ahora
-  },
-})
-
-export interface AppStore {
-  // Aquí agregarás tus futuros slices (cart, favorites, etc.)
-  placeholder: ReturnType<typeof placeholderSlice.reducer>
-}
-
-export const store = configureStore<AppStore>({
+export const store = configureStore({
   reducer: {
-    placeholder: placeholderSlice.reducer,
-    // Aquí agregarás tus futuros reducers cuando los crees
-    // Ejemplo: cart: cartSlice.reducer,
+    cart: cartReducer,
+    products: productsReducer,
   },
-})
+});
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 
 
