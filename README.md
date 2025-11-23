@@ -1,80 +1,80 @@
- 🪑 Panto - E-commerce de Muebles
+# 🪑 Panto - Furniture E-commerce
 
-> Plataforma de comercio electrónico moderna y elegante para la venta de muebles de alta calidad, construida con React, TypeScript y Node.js.
+> Modern and elegant e-commerce platform for selling high-quality furniture, built with React, TypeScript and Node.js.
 
-![Panto Website](./public/icon.png)
+![Panto Website](src/client/assets/main-principal.png)
 
-## 📋 Descripción
+## 📋 Description
 
-**Panto** es una aplicación web full-stack de e-commerce especializada en la venta de muebles. Ofrece una experiencia de usuario fluida y moderna, con un sistema completo de autenticación, gestión de productos, carrito de compras y procesamiento de órdenes.
+**Panto** is a full-stack e-commerce web application specialized in furniture sales. It offers a smooth and modern user experience, with a complete authentication system, product management, shopping cart, and order processing.
 
-El proyecto está diseñado con arquitectura cliente-servidor, implementando las mejores prácticas de desarrollo web moderno, tipado estático con TypeScript, y una interfaz de usuario responsive construida con React y estilizada con Material-UI y Tailwind CSS.
+The project is designed with client-server architecture, implementing modern web development best practices, static typing with TypeScript, and a responsive user interface built with React and styled with Material-UI and Tailwind CSS.
 
-## ✨ Características Principales
-
-### Frontend
-- 🎨 **Interfaz Moderna**: Diseño elegante y responsive con Material-UI y Tailwind CSS
-- 🔐 **Autenticación Segura**: Sistema de login/registro con Firebase Authentication
-- 🛒 **Carrito de Compras**: Gestión completa del carrito con Redux Toolkit
-- 📱 **Diseño Responsive**: Optimizado para dispositivos móviles, tablets y desktop
-- 🎭 **Guards de Autenticación**: Rutas protegidas para usuarios autenticados
-- 🎠 **Carruseles Interactivos**: Galerías de productos y testimonios con React Slick
-- 📦 **Catálogo de Productos**: Sistema de filtrado y categorización de productos
-- ⭐ **Sistema de Testimonios**: Sección de reseñas y opiniones de clientes
-- 🎯 **Experiencia de Usuario**: Navegación intuitiva y fluida con React Router
-
-### Backend
-- 🚀 **API RESTful**: Endpoints bien estructurados con Express.js
-- 🗄️ **Base de Datos MongoDB**: Almacenamiento eficiente con Mongoose
-- ✅ **Validación de Datos**: Schemas robustos con Zod
-- 🔒 **Firebase Admin**: Integración con Firebase para autenticación del lado del servidor
-- 📝 **Logging**: Sistema de logs con Morgan
-- 🌐 **CORS Configurado**: Control de orígenes permitidos
-- 🎯 **TypeScript**: Código tipado y mantenible
-
-## 🛠️ Tecnologías
+## ✨ Key Features
 
 ### Frontend
-| Tecnología | Versión | Propósito |
-|-----------|---------|-----------|
-| React | ^19.2.0 | Librería UI |
-| TypeScript | ~5.9.3 | Lenguaje de programación |
-| Vite | ^7.2.2 | Build tool y dev server |
-| Redux Toolkit | ^2.10.1 | Gestión de estado global |
-| Material-UI | ^7.3.5 | Componentes UI |
-| Tailwind CSS | ^4.1.17 | Framework CSS |
-| Firebase | ^12.6.0 | Autenticación |
-| React Router | ^7.9.6 | Navegación |
-| React Slick | ^0.31.0 | Carruseles |
+- 🎨 **Modern Interface**: Elegant and responsive design with Material-UI and Tailwind CSS
+- 🔐 **Secure Authentication**: Login/registration system with Firebase Authentication
+- 🛒 **Shopping Cart**: Complete cart management with Redux Toolkit
+- 📱 **Responsive Design**: Optimized for mobile devices, tablets, and desktop
+- 🎭 **Authentication Guards**: Protected routes for authenticated users
+- 🎠 **Interactive Carousels**: Product and testimonial galleries with React Slick
+- 📦 **Product Catalog**: Product filtering and categorization system
+- ⭐ **Testimonial System**: Customer reviews and opinions section
+- 🎯 **User Experience**: Intuitive and smooth navigation with React Router
 
 ### Backend
-| Tecnología | Versión | Propósito |
+- 🚀 **RESTful API**: Well-structured endpoints with Express.js
+- 🗄️ **MongoDB Database**: Efficient storage with Mongoose
+- ✅ **Data Validation**: Robust schemas with Zod
+- 🔒 **Firebase Admin**: Firebase integration for server-side authentication
+- 📝 **Logging**: Log system with Morgan
+- 🌐 **Configured CORS**: Allowed origins control
+- 🎯 **TypeScript**: Typed and maintainable code
+
+## 🛠️ Technologies
+
+### Frontend
+| Technology | Version | Purpose |
 |-----------|---------|-----------|
-| Express | ^4.21.2 | Framework web |
-| TypeScript | ^5.9.3 | Lenguaje de programación |
-| MongoDB/Mongoose | ^8.20.1 | Base de datos |
-| Firebase Admin | ^13.2.0 | Autenticación backend |
-| Zod | ^3.24.1 | Validación de esquemas |
-| Morgan | ^1.10.1 | HTTP logger |
+| React | ^19.2.0 | UI Library |
+| TypeScript | ~5.9.3 | Programming Language |
+| Vite | ^7.2.2 | Build tool and dev server |
+| Redux Toolkit | ^2.10.1 | Global state management |
+| Material-UI | ^7.3.5 | UI Components |
+| Tailwind CSS | ^4.1.17 | CSS Framework |
+| Firebase | ^12.6.0 | Authentication |
+| React Router | ^7.9.6 | Navigation |
+| React Slick | ^0.31.0 | Carousels |
+
+### Backend
+| Technology | Version | Purpose |
+|-----------|---------|-----------|
+| Express | ^4.21.2 | Web Framework |
+| TypeScript | ^5.9.3 | Programming Language |
+| MongoDB/Mongoose | ^8.20.1 | Database |
+| Firebase Admin | ^13.2.0 | Backend Authentication |
+| Zod | ^3.24.1 | Schema Validation |
+| Morgan | ^1.10.1 | HTTP Logger |
 | CORS | ^2.8.5 | Cross-Origin Resource Sharing |
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
 panto-website/
 │
-├── src/client/                 # Código del frontend
+├── src/client/                 # Frontend code
 │   ├── components/
-│   │   ├── common/            # Componentes reutilizables
+│   │   ├── common/            # Reusable components
 │   │   │   ├── button-carousel.tsx
 │   │   │   ├── card-products.tsx
 │   │   │   ├── cards-checkout.tsx
 │   │   │   ├── carousel-slider.tsx
 │   │   │   ├── notification-toast.tsx
 │   │   │   └── testimonial-card.tsx
-│   │   ├── features/          # Componentes de características
+│   │   ├── features/          # Feature components
 │   │   │   └── select-bar-product.tsx
-│   │   └── layout/            # Componentes de layout
+│   │   └── layout/            # Layout components
 │   │       ├── header.tsx
 │   │       ├── footer.tsx
 │   │       ├── hero.tsx
@@ -85,13 +85,13 @@ panto-website/
 │   │       └── why-choosing.tsx
 │   │
 │   ├── pages/
-│   │   ├── public/            # Páginas públicas
+│   │   ├── public/            # Public pages
 │   │   │   ├── home/
 │   │   │   └── auth/
-│   │   └── private/           # Páginas privadas
+│   │   └── private/           # Private pages
 │   │       └── cart/
 │   │
-│   ├── redux/                 # Gestión de estado
+│   ├── redux/                 # State management
 │   │   ├── store/
 │   │   ├── slices/
 │   │   │   ├── cart.ts
@@ -99,79 +99,79 @@ panto-website/
 │   │   └── hooks.ts
 │   │
 │   ├── services/
-│   │   ├── api/               # Llamadas a la API
+│   │   ├── api/               # API calls
 │   │   │   ├── products.ts
 │   │   │   └── cart.ts
-│   │   └── firebase/          # Configuración Firebase
+│   │   └── firebase/          # Firebase configuration
 │   │       └── firebase-config.ts
 │   │
 │   ├── context/               # Context API
 │   │   └── auth-context.tsx
 │   │
-│   ├── guards/                # Guards de rutas
+│   ├── guards/                # Route guards
 │   │   └── auth-guards.tsx
 │   │
 │   ├── hooks/                 # Custom hooks
 │   │   ├── use-notification.ts
 │   │   └── use-responsive-slides.ts
 │   │
-│   ├── routes/                # Configuración de rutas
+│   ├── routes/                # Route configuration
 │   │   └── routes.ts
 │   │
-│   ├── types/                 # Definiciones de tipos
-│   ├── constants/             # Constantes
-│   ├── utils/                 # Utilidades
-│   └── assets/                # Imágenes y recursos
+│   ├── types/                 # Type definitions
+│   ├── constants/             # Constants
+│   ├── utils/                 # Utilities
+│   └── assets/                # Images and resources
 │
-├── server/                    # Código del backend
+├── server/                    # Backend code
 │   └── src/
-│       ├── config/            # Configuraciones
+│       ├── config/            # Configurations
 │       │   ├── database.ts
 │       │   └── index.ts
 │       │
-│       ├── controllers/       # Controladores
+│       ├── controllers/       # Controllers
 │       │   ├── product.controller.ts
 │       │   └── order.controller.ts
 │       │
-│       ├── models/            # Modelos de datos
+│       ├── models/            # Data models
 │       │   ├── product.model.ts
 │       │   └── orders.model.ts
 │       │
-│       ├── routes/            # Rutas de la API
+│       ├── routes/            # API routes
 │       │   ├── product.routes.ts
 │       │   └── order.routes.ts
 │       │
-│       ├── services/          # Lógica de negocio
+│       ├── services/          # Business logic
 │       ├── middleware/        # Middlewares
-│       ├── types/             # Tipos TypeScript
-│       ├── utils/             # Utilidades
-│       └── index.ts           # Punto de entrada
+│       ├── types/             # TypeScript types
+│       ├── utils/             # Utilities
+│       └── index.ts           # Entry point
 │
-├── shared/                    # Código compartido
-│   └── types/                 # Tipos compartidos
+├── shared/                    # Shared code
+│   └── types/                 # Shared types
 │
-└── public/                    # Recursos públicos
+└── public/                    # Public resources
     └── icon.png
 
 ```
 
-## 🚀 Instalación y Configuración
+## 🚀 Installation and Setup
 
-### Prerrequisitos
+### Prerequisites
 
-- Node.js (v18 o superior)
-- npm o yarn
-- MongoDB (local o Atlas)
-- Cuenta de Firebase
+- Node.js (v18 or higher)
+- npm or yarn
+- MongoDB (local or Atlas)
+- Firebase Account
 
-### 1. Clonar el Repositorio
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/tu-usuario/panto-website.git
+git clone https://github.com/your-username/panto-website.git
 cd panto-website
 ```
 
-### 2. Instalar Dependencias
+### 2. Install Dependencies
 
 #### Frontend
 ```bash
@@ -184,12 +184,35 @@ cd server
 npm install
 ```
 
+### 3. Configure Environment Variables
 
-### 4. Iniciar el Proyecto
+#### Backend (`server/.env`)
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_uri
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_PRIVATE_KEY=your_private_key
+FIREBASE_CLIENT_EMAIL=your_client_email
+```
 
-#### Desarrollo
+#### Frontend
+Configure Firebase in `src/client/services/firebase/firebase-config.ts`:
+```typescript
+const firebaseConfig = {
+  apiKey: "your_api_key",
+  authDomain: "your_auth_domain",
+  projectId: "your_project_id",
+  storageBucket: "your_storage_bucket",
+  messagingSenderId: "your_messaging_sender_id",
+  appId: "your_app_id"
+};
+```
 
-**Opción 1: Ejecutar frontend y backend por separado**
+### 4. Start the Project
+
+#### Development
+
+**Option 1: Run frontend and backend separately**
 
 Terminal 1 - Frontend:
 ```bash
@@ -202,13 +225,13 @@ cd server
 npm run dev
 ```
 
-**Opción 2: Ejecutar ambos simultáneamente (desde la carpeta server)**
+**Option 2: Run both simultaneously (from server folder)**
 ```bash
 cd server
 npm run dev:all
 ```
 
-#### Producción
+#### Production
 
 Frontend:
 ```bash
@@ -223,73 +246,73 @@ npm run build
 npm start
 ```
 
-## 📡 Endpoints de la API
+## 📡 API Endpoints
 
-### Productos
+### Products
 
-| Método | Endpoint | Descripción |
+| Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/api/products` | Obtener todos los productos |
-| GET | `/api/products/:id` | Obtener un producto específico |
-| POST | `/api/products` | Crear un nuevo producto |
-| PUT | `/api/products/:id` | Actualizar un producto |
-| DELETE | `/api/products/:id` | Eliminar un producto |
+| GET | `/api/products` | Get all products |
+| GET | `/api/products/:id` | Get a specific product |
+| POST | `/api/products` | Create a new product |
+| PUT | `/api/products/:id` | Update a product |
+| DELETE | `/api/products/:id` | Delete a product |
 
-### Órdenes
+### Orders
 
-| Método | Endpoint | Descripción |
+| Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/api/orders` | Obtener todas las órdenes |
-| GET | `/api/orders/:id` | Obtener una orden específica |
-| POST | `/api/orders` | Crear una nueva orden |
-| PUT | `/api/orders/:id` | Actualizar una orden |
-| DELETE | `/api/orders/:id` | Eliminar una orden |
+| GET | `/api/orders` | Get all orders |
+| GET | `/api/orders/:id` | Get a specific order |
+| POST | `/api/orders` | Create a new order |
+| PUT | `/api/orders/:id` | Update an order |
+| DELETE | `/api/orders/:id` | Delete an order |
 
-## 🎨 Características de la UI
+## 🎨 UI Features
 
-### Secciones Principales
+### Main Sections
 
-1. **Hero Section**: Banner principal con imagen de portada y CTA
-2. **Why Choosing**: Razones para elegir Panto
-3. **Products Container**: Catálogo de productos con filtros y categorías
-4. **About Us**: Información sobre la empresa y materiales
-5. **Testimonials**: Reseñas y testimonios de clientes
-6. **Footer**: Información de contacto y enlaces
+1. **Hero Section**: Main banner with cover image and CTA
+2. **Why Choosing**: Reasons to choose Panto
+3. **Products Container**: Product catalog with filters and categories
+4. **About Us**: Information about the company and materials
+5. **Testimonials**: Customer reviews and testimonials
+6. **Footer**: Contact information and links
 
-### Componentes Reutilizables
+### Reusable Components
 
-- **Card Products**: Tarjetas de productos con imagen, precio y botón de añadir al carrito
-- **Carousel Slider**: Carrusel personalizado para galerías
-- **Notification Toast**: Sistema de notificaciones
-- **Testimonial Card**: Tarjetas de testimonios con avatar y reseña
-- **Button Carousel**: Botones de navegación para carruseles
-- **Search Bar**: Barra de búsqueda de productos
+- **Card Products**: Product cards with image, price, and add-to-cart button
+- **Carousel Slider**: Custom carousel for galleries
+- **Notification Toast**: Notification system
+- **Testimonial Card**: Testimonial cards with avatar and review
+- **Button Carousel**: Navigation buttons for carousels
+- **Search Bar**: Product search bar
 
-## 🔒 Seguridad
+## 🔒 Security
 
-- ✅ Autenticación con Firebase
-- ✅ Guards de rutas para páginas privadas
-- ✅ Validación de datos con Zod en el backend
-- ✅ CORS configurado
-- ✅ Variables de entorno para datos sensibles
-- ✅ TypeScript para prevención de errores en tiempo de compilación
+- ✅ Authentication with Firebase
+- ✅ Route guards for private pages
+- ✅ Data validation with Zod on the backend
+- ✅ Configured CORS
+- ✅ Environment variables for sensitive data
+- ✅ TypeScript for compile-time error prevention
 
-## 🎯 Estado Global (Redux)
+## 🎯 Global State (Redux)
 
 ### Slices
 
-- **Cart Slice**: Gestión del carrito de compras
-  - Añadir productos
-  - Eliminar productos
-  - Actualizar cantidades
-  - Calcular totales
+- **Cart Slice**: Shopping cart management
+  - Add products
+  - Remove products
+  - Update quantities
+  - Calculate totals
 
-- **Products Slice**: Gestión de productos
-  - Lista de productos
-  - Producto seleccionado
-  - Filtros y categorías
+- **Products Slice**: Product management
+  - Product list
+  - Selected product
+  - Filters and categories
 
-## 🌐 Despliegue
+## 🌐 Deployment
 
 ### Frontend (Vercel)
 
@@ -303,45 +326,45 @@ vercel --prod
 ```bash
 cd server
 npm run build
-# Configurar variables de entorno en la plataforma
-# Desplegar según las instrucciones de la plataforma
+# Configure environment variables on the platform
+# Deploy according to platform instructions
 ```
 
-## 📝 Scripts Disponibles
+## 📝 Available Scripts
 
 ### Frontend
 
-- `npm run dev` - Inicia el servidor de desarrollo
-- `npm run build` - Construye la aplicación para producción
-- `npm run preview` - Previsualiza la build de producción
-- `npm run lint` - Ejecuta el linter
+- `npm run dev` - Start development server
+- `npm run build` - Build application for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run linter
 
 ### Backend
 
-- `npm run dev` - Inicia el servidor en modo desarrollo con hot reload
-- `npm run dev:all` - Inicia frontend y backend simultáneamente
-- `npm run build` - Compila TypeScript a JavaScript
-- `npm start` - Inicia el servidor en producción
-- `npm run lint` - Ejecuta el linter
+- `npm run dev` - Start server in development mode with hot reload
+- `npm run dev:all` - Start frontend and backend simultaneously
+- `npm run build` - Compile TypeScript to JavaScript
+- `npm start` - Start server in production
+- `npm run lint` - Run linter
 
-## 🤝 Contribución
+## 🤝 Contributing
 
-Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
+Contributions are welcome. Please follow these steps:
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-caracteristica`)
-3. Commit tus cambios (`git commit -m 'Add: nueva característica'`)
-4. Push a la rama (`git push origin feature/nueva-caracteristica`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create a branch for your feature (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add: new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto es privado y no tiene licencia pública.
+This project is private and has no public license.
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
 **Costantini**
 
 ---
 
-⭐ Si este proyecto te fue útil, no olvides darle una estrella en GitHub!
+⭐ If this project was useful to you, don't forget to give it a star on GitHub!
