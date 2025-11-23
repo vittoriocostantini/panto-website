@@ -24,6 +24,6 @@ dist-ssr
 *.sln
 *.sw?
 .env
-
+dist
 # Firebase api key
 client/src/services/firebase/firebase-config.ts
