@@ -1,10 +1,10 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.tsx";
+import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { store } from "./redux/store/store.ts";
-import { AuthProvider } from "./context/index.ts";
+import { store } from "./redux/store/store";
+import { AuthProvider } from "./context/index";
 import { useLocation } from "react-router-dom";
 import { useLayoutEffect } from "react";
 const Wrapper = ({children}: {children: React.ReactNode}) => {

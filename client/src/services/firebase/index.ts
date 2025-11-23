@@ -1,1 +1,1 @@
-export { auth, provider, firebaseConfig } from './firebase-config.js';
+export { auth, provider, firebaseConfig } from './firebase-config';
