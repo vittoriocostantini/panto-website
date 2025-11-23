@@ -1,6 +1,7 @@
 import { type CartItem } from "../../redux/slices/cart";
 
-const CHECKOUT_URL = "http://localhost:5001/api/orders";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5001/api";
+const CHECKOUT_URL = `${API_BASE_URL}/orders`;
 
 export interface CheckoutResult {
   success: boolean;

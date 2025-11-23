@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
+    "dev:all": "concurrently \"npm run dev\" \"npm run dev:client\" --names \"SERVER,CLIENT\" --prefix-colors \"blue,green\"",
+    "dev:client": "cd .. && npm run dev",
     "build": "tsc",
     "start": "node dist/index.js",
     "lint": "eslint src --ext .ts"
@@ -34,6 +36,7 @@
     "@types/node": "^24.10.0",
     "@typescript-eslint/eslint-plugin": "^8.46.3",
     "@typescript-eslint/parser": "^8.46.3",
+    "concurrently": "^9.2.1",
     "eslint": "^9.39.1",
     "tsx": "^4.19.2",
     "typescript": "^5.9.3"

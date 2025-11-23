@@ -1,5 +1,7 @@
 import { type Product } from "../../types";
-const API_URL = "http://localhost:5001/api/products";
+
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5001/api";
+const API_URL = `${API_BASE_URL}/products`;
 
 /**
  * Obtiene todos los productos de la base de datos

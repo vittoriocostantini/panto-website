@@ -1,0 +1,336 @@
+[{
+  "_id": {
+    "$oid": "6920caa3ff243c79f584be92"
+  },
+  "name": "Sakarias Armchair",
+  "price": 394,
+  "category": "Chair",
+  "rating": 5,
+  "description": "Un sillón moderno y cómodo con reposabrazos, ideal para cualquier sala de estar.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/chairs/sakarias.png?updatedAt=1763755048123",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920caacff243c79f584be94"
+  },
+  "name": "Baltsar Chair",
+  "price": 299,
+  "category": "Chair",
+  "rating": 4,
+  "description": "Silla de diseño ergonómico con base de metal y acabado en madera de abedul.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/chairs/baltsar.png?updatedAt=1763755051485",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cab5ff243c79f584be96"
+  },
+  "name": "Anjay Chair",
+  "price": 519,
+  "category": "Chair",
+  "rating": 5,
+  "description": "Una pieza de lujo con tapizado de terciopelo y patas doradas.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/chairs/anjay.png?updatedAt=1763755059536",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cabeff243c79f584be98"
+  },
+  "name": "Eames Chair",
+  "price": 921,
+  "category": "Chair",
+  "rating": 5,
+  "description": "Clásico del diseño, icónica silla Eames con base de madera contrachapada y cuero.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/chairs/eames.png?updatedAt=1763755119620",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cac5ff243c79f584be9a"
+  },
+  "name": "Fauteuil Chair",
+  "price": 921,
+  "category": "Chair",
+  "rating": 5,
+  "description": "Sillón estilo Fauteuil, elegante y bajo, perfecto para un rincón de lectura.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/chairs/fauteil.png?updatedAt=1763755059631",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cacfff243c79f584be9c"
+  },
+  "name": "Lounge Chair",
+  "price": 921,
+  "category": "Chair",
+  "rating": 5,
+  "description": "Silla de salón grande y reclinable, diseñada para la máxima relajación.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/chairs/lounge.png?updatedAt=1763755051709",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cad8ff243c79f584be9e"
+  },
+  "name": "Couch Chair",
+  "price": 921,
+  "category": "Chair",
+  "rating": 5,
+  "description": "Híbrido entre silla y sofá, ofrece soporte y suavidad excepcionales.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/chairs/couch.png?updatedAt=1763755082275",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cae0ff243c79f584bea0"
+  },
+  "name": "Nyantuy Chair",
+  "price": 921,
+  "category": "Chair",
+  "rating": 5,
+  "description": "Silla contemporánea con una estructura minimalista y un asiento profundo.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/chairs/nyantuy.png?updatedAt=1763755040478",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cc104a016a1ec4c5a756"
+  },
+  "name": "Bedspread Bed",
+  "price": 699,
+  "category": "Beds",
+  "rating": 5,
+  "description": "Cama completa con colcha y diseño moderno, lista para usar.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/beds/bedspread.png?updatedAt=1763755001044",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cc314a016a1ec4c5a758"
+  },
+  "name": "Faux Leather Bed",
+  "price": 829,
+  "category": "Beds",
+  "rating": 4,
+  "description": "Elegante cama con cabecero tapizado en piel sintética negra.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/beds/faux.png?updatedAt=1763755079369",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cc3a4a016a1ec4c5a75a"
+  },
+  "name": "Foot Board Bed",
+  "price": 915,
+  "category": "Beds",
+  "rating": 5,
+  "description": "Cama clásica con piecero alto, perfecta para dormitorios tradicionales.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/beds/foot.png?updatedAt=1763755100294",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cc414a016a1ec4c5a75c"
+  },
+  "name": "Mattress Bed",
+  "price": 545,
+  "category": "Beds",
+  "rating": 4,
+  "description": "Base y colchón de alta calidad incluidos, ideal para un descanso óptimo.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/beds/nightstand.png?updatedAt=1763755051672",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cc494a016a1ec4c5a75e"
+  },
+  "name": "Nightstand Combo",
+  "price": 499,
+  "category": "Beds",
+  "rating": 4,
+  "description": "Cama funcional que incluye mesitas de noche integradas.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/beds/nightstand.png?updatedAt=1763755051672",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cc504a016a1ec4c5a760"
+  },
+  "name": "Platform Bed",
+  "price": 780,
+  "category": "Beds",
+  "rating": 5,
+  "description": "Cama de plataforma con diseño minimalista, no requiere somier.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/beds/platform.png?updatedAt=1763754902529",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cc7f4a016a1ec4c5a762"
+  },
+  "name": "Ajur Lamp",
+  "price": 1299,
+  "category": "Lamps",
+  "rating": 5,
+  "description": "Una lámpara de mesa con un diseño sofisticado, ideal para crear un ambiente cálido.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/lamps/abajur.png?updatedAt=1763754997374",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cc854a016a1ec4c5a764"
+  },
+  "name": "Bureau Lamp",
+  "price": 1299,
+  "category": "Lamps",
+  "rating": 5,
+  "description": "Lámpara de escritorio funcional y ajustable, perfecta para tareas de oficina o estudio.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/lamps/bureau.png?updatedAt=1763755162824",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cc8a4a016a1ec4c5a766"
+  },
+  "name": "Crystal Lamp",
+  "price": 1299,
+  "category": "Lamps",
+  "rating": 5,
+  "description": "Lámpara elegante con base de cristal, que añade un toque de lujo a cualquier habitación.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/lamps/crystal.png?updatedAt=1763755004309",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cc904a016a1ec4c5a768"
+  },
+  "name": "French Lamp",
+  "price": 1299,
+  "category": "Lamps",
+  "rating": 5,
+  "description": "Lámpara de estilo francés, con detalles intrincados y un acabado clásico.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/lamps/french.png?updatedAt=1763755051240",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cc964a016a1ec4c5a76a"
+  },
+  "name": "Landshade Lamp",
+  "price": 1299,
+  "category": "Lamps",
+  "rating": 5,
+  "description": "Lámpara de pie de gran tamaño, con una pantalla ancha para iluminación ambiental.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/lamps/landshade.png?updatedAt=1763754982408",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cc9c4a016a1ec4c5a76c"
+  },
+  "name": "Pendant Lamp",
+  "price": 1299,
+  "category": "Lamps",
+  "rating": 5,
+  "description": "Lámpara colgante moderna, perfecta para colgar sobre islas de cocina o mesas de comedor.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/lamps/pendant.png?updatedAt=1763755012549",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920ccdc4a016a1ec4c5a76f"
+  },
+  "name": "Chaise Longue Sofa",
+  "price": 1299,
+  "category": "Sofa",
+  "rating": 5,
+  "description": "Sofá con un extremo extendido para estirar las piernas, ofreciendo comodidad suprema.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/sofa/chaiseLongue.png?updatedAt=1763755157429",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cce24a016a1ec4c5a771"
+  },
+  "name": "Corner Sofa",
+  "price": 1299,
+  "category": "Sofa",
+  "rating": 5,
+  "description": "Sofá modular que encaja perfectamente en las esquinas de la sala, optimizando el espacio.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/sofa/corner.png?updatedAt=1763755012868",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cce84a016a1ec4c5a773"
+  },
+  "name": "Cushion Sofa",
+  "price": 1299,
+  "category": "Sofa",
+  "rating": 5,
+  "description": "Sofá con cojines extra grandes y mullidos para una sensación de máximo confort.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/sofa/cushion.png?updatedAt=1763755132343",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cced4a016a1ec4c5a775"
+  },
+  "name": "Household Sofa",
+  "price": 1299,
+  "category": "Sofa",
+  "rating": 5,
+  "description": "Sofá estándar de tres plazas, ideal para el uso diario en el hogar.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/sofa/household.png?updatedAt=1763755059621",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920ccf34a016a1ec4c5a777"
+  },
+  "name": "Loveseat Sofa",
+  "price": 1299,
+  "category": "Sofa",
+  "rating": 5,
+  "description": "Sofá pequeño de dos plazas, perfecto para parejas o espacios reducidos.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/sofa/loveseat.png?updatedAt=1763755158522",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920ccf94a016a1ec4c5a779"
+  },
+  "name": "Padding Sofa",
+  "price": 1299,
+  "category": "Sofa",
+  "rating": 5,
+  "description": "Sofá con abundante acolchado interno para un soporte suave y duradero.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/sofa/padding.png?updatedAt=1763755104284",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920ccfe4a016a1ec4c5a77b"
+  },
+  "name": "Textile Sofa",
+  "price": 1299,
+  "category": "Sofa",
+  "rating": 5,
+  "description": "Sofá tapizado con una tela textil de alta calidad, resistente y fácil de limpiar.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/sofa/textile.png?updatedAt=1763755136063",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6920cd054a016a1ec4c5a77d"
+  },
+  "name": "Upholstery Sofa",
+  "price": 1299,
+  "category": "Sofa",
+  "rating": 5,
+  "description": "Sofá con tapicería detallada y estructura de madera visible, de estilo tradicional.",
+  "image": "https://ik.imagekit.io/6hmu5lo0p/panto-db/sofa/upholstery.png?updatedAt=1763755011520",
+  "__v": 0
+}]
