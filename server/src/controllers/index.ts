@@ -1,2 +1,2 @@
-export * from './product.controller';
-export * from './order.controller';
+export * from './product.controller.js';
+export * from './order.controller.js';

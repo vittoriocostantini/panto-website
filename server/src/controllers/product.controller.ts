@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Product } from "../models/";
+import { Product } from "../models/index.js";
 
 // get products
 

@@ -1,8 +1,8 @@
 import "dotenv/config";
 import express from "express";
-import { connectDB } from "./config/";
+import { connectDB } from "./config/index.js";
 import morgan from "morgan";
-import { productRoutes, orderRoutes } from "./routes/";
+import { productRoutes, orderRoutes } from "./routes/index.js";
 import cors from "cors";
 // Connect to MongoDB
 connectDB();
