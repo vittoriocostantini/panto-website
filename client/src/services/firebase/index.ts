@@ -1,1 +1,1 @@
-export { auth, provider, firebaseConfig } from './firebase-config.ts';
+export { auth, provider, firebaseConfig } from './firebase-config';
