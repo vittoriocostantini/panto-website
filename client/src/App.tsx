@@ -1,8 +1,8 @@
 import "./App.css";
 import { Header, Footer } from "./components/layout";
 import { Home, FormUser } from "./pages/public";
-import { Cart } from "./pages/private/";
-import { RoutesWithNotFound } from "./utils/";
+import { Cart } from "./pages/private";
+import { RoutesWithNotFound } from "./utils";
 import { Route, useLocation } from "react-router-dom";
 import { PublicRoutes, PrivateRoutes } from "./routes";
 import { AuthGuard } from "./guards";

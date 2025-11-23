@@ -1,4 +1,4 @@
-import { RoutesWithNotFound } from "../../utils/";
+import { RoutesWithNotFound } from "../../utils";
 import { Route } from "react-router-dom";
 import { PrivateRoutes } from "../../routes";
 import Cart from "./cart/cart";

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { CardProducts, CarouselSlider } from "../common";
-import { SelectBarProduct } from "../features/";
+import { SelectBarProduct } from "../features";
 import { ArrowRightAlt } from "@mui/icons-material";
 import { type Product } from "../../types";
 import { type ProductCategory } from "../../constants";

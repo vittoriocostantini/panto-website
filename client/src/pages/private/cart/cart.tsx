@@ -11,8 +11,8 @@ import {
   removeFromCart,
   clearCart,
 } from "../../../redux/slices/cart";
-import { checkout } from "../../../services/api/";
-import { useAppDispatch, useAppSelector } from "../../../redux/";
+import { checkout } from "../../../services/api";
+import { useAppDispatch, useAppSelector } from "../../../redux";
 import { useNotification } from "../../../hooks";
 
 function Cart() {

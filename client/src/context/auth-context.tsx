@@ -13,7 +13,7 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
-import { auth, provider } from "../services/firebase/";
+import { auth, provider } from "../services/firebase";
 
 interface AuthContextType {
   user: User | null;
