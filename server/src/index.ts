@@ -16,7 +16,7 @@ const allowedOrigins = [
   "http://localhost:5000",
   "http://localhost:3001",
   "http://localhost:5173",
-  "https://panto-website-xg2s.vercel.app/",
+  "https://panto-website-xg2s.vercel.app",
   "http://localhost:3000",
 ];
 
