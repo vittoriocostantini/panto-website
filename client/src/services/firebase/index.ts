@@ -1,1 +1,1 @@
-export * from './firebase-config.js';
+export * from './firebase-config';
