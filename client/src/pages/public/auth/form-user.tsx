@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { Email, Lock, Visibility, VisibilityOff } from "@mui/icons-material";
 import reviewImage from "../../../assets/reviews/review-5.jpeg";
 import { PublicRoutes } from "../../../routes";
-import { useAuth } from "../../../context";
+// import { useAuth } from "../../../context";
 import { useNavigate } from "react-router-dom";
 
 function FormUser() {
-  const { loginWithGoogle, loginWithEmail, registerWithEmail } = useAuth();
+  // const { loginWithGoogle, loginWithEmail, registerWithEmail } = useAuth();
   const navigate = useNavigate();
 
   const [isLogin, setIsLogin] = useState(true);
@@ -101,23 +101,23 @@ function FormUser() {
       return;
     }
 
-    await runAuthFlow(
-      () =>
-        isLogin
-          ? loginWithEmail(email, password)
-          : registerWithEmail(email, password),
-      "Ocurrió un error al autenticarse"
-    );
+    // await runAuthFlow(
+    //   () =>
+    //     isLogin
+    //       ? loginWithEmail(email, password)
+    //       : registerWithEmail(email, password),
+    //   "Ocurrió un error al autenticarse"
+    // );
   };
 
 
   // Función para manejar el inicio de sesión con Google
-  const handleGoogleLogin = async () => {
-    await runAuthFlow(
-      () => loginWithGoogle(),
-      "Ocurrió un error al iniciar sesión con Google"
-    );
-  };
+  // const handleGoogleLogin = async () => {
+  //   await runAuthFlow(
+  //     () => loginWithGoogle(),
+  //     "Ocurrió un error al iniciar sesión con Google"
+  //   );
+  // };
 
   return (
     <div className="h-screen bg-white flex">
@@ -289,7 +289,7 @@ function FormUser() {
 
             <button
               type="button"
-              onClick={handleGoogleLogin}
+              // onClick={handleGoogleLogin}
               disabled={loading}
               className="w-full px-8 py-4 bg-white border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-semibold cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
             >

@@ -1,25 +1,22 @@
 import { AccountCircle, LocalMall, Logout } from "@mui/icons-material";
 import logoPanto from "../../assets/logo-panto.png";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../../context";
+// import { useAuth } from "../../context";
 import { PublicRoutes } from "../../routes";
-import { Badge } from "@mui/material";
-import { selectCartCount } from "../../redux/slices/cart";
-import { useAppSelector } from "../../redux/hooks";
+// import { Badge } from "@mui/material";
 
 const Header: React.FC = () => {
-  const { user, logout } = useAuth();
-  const cartCount = useAppSelector(selectCartCount);
+  // const { user, logout } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogout = async () => {
-    try {
-      await logout();
-      navigate(PublicRoutes.HOME);
-    } catch (error) {
-      console.error("Error al cerrar sesión:", error);
-    }
-  };
+  // const handleLogout = async () => {
+  //   try {
+  //     await logout();
+  //     navigate(PublicRoutes.HOME);
+  //   } catch (error) {
+  //     console.error("Error al cerrar sesión:", error);
+  //   }
+  // };
 
   return (
     <header className="fixed w-full z-11 text-white px-6 py-4 bg-black/20 backdrop-blur-md">
@@ -40,11 +37,11 @@ const Header: React.FC = () => {
             to="/cart"
             className="hover:text-gray-300 cursor-pointer hover:scale-110 transition-all duration-300"
           >
-            <Badge badgeContent={cartCount} color="primary">
+            {/* <Badge badgeContent={cartCount} color="primary">
               <LocalMall fontSize="medium" />
-            </Badge>
+            </Badge> */}
           </Link>
-          {user ? (
+          {/* {user ? (
             <button
               onClick={handleLogout}
               className="hover:text-gray-300 cursor-pointer hover:scale-110 transition-all duration-300"
@@ -59,7 +56,7 @@ const Header: React.FC = () => {
             >
               <AccountCircle fontSize="medium" />
             </Link>
-          )}
+          )} */}
         </div>
       </div>
     </header>

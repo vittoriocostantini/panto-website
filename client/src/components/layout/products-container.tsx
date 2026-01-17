@@ -1,41 +1,16 @@
-import { useEffect } from "react";
-import { CardProducts, CarouselSlider } from "../common";
-import { SelectBarProduct } from "../features";
+// import { useEffect } from "react";
+// import { CardProducts, CarouselSlider } from "../common";
+// import { SelectBarProduct } from "../features";
 import { ArrowRightAlt } from "@mui/icons-material";
-import { type Product } from "../../types";
-import { type ProductCategory } from "../../constants";
 import { useResponsiveSlides } from "../../hooks/use-responsive-slides";
-import { addToCart } from "../../redux/slices/cart";
-import {
-  fetchProductsByCategory,
-  setSelectedCategory,
-  selectSelectedCategory,
-  selectCurrentProducts,
-  selectIsLoadingCurrent,
-  selectHasCachedProducts,
-} from "../../redux/slices/products";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+
 
 const ProductsContainer = () => {
-  const dispatch = useAppDispatch();
 
-  // Selectores de Redux
-  const selectedCategory = useAppSelector(selectSelectedCategory);
-  const currentProducts = useAppSelector(selectCurrentProducts);
-  const loading = useAppSelector(selectIsLoadingCurrent);
-  const hasCachedProducts = useAppSelector((state) =>
-    selectHasCachedProducts(state, selectedCategory)
-  );
 
-  const handleAddToCart = (product: Product) => {
-    dispatch(addToCart(product));
-  };
 
-  const handleCategoryChange = (category: ProductCategory) => {
-    dispatch(setSelectedCategory(category));
-  };
 
-  const { slidesToShow } = useResponsiveSlides({
+  const {  } = useResponsiveSlides({
     initialSlides: 4,
     rules: [
       { maxWidth: 640, slidesToShow: 1 },
@@ -46,26 +21,17 @@ const ProductsContainer = () => {
   });
 
   // Fetch productos solo si no están cacheados
-  useEffect(() => {
-    if (!hasCachedProducts) {
-      dispatch(fetchProductsByCategory(selectedCategory));
-    }
-  }, [selectedCategory, hasCachedProducts, dispatch]);
-
-  const carouselItems = currentProducts.map((product) => (
-    <CardProducts key={product.id} {...product} onAddToCart={handleAddToCart} />
-  ));
 
   return (
     <section className="py-16 gray-gradient-product">
       <div className="justify-center items-center text-center">
         <h2 className="text-5xl font-bold mb-4">Best Selling Product</h2>
-        <SelectBarProduct
+        {/* <SelectBarProduct
           value={selectedCategory}
           onChange={handleCategoryChange}
-        />
+        /> */}
       </div>
-      <CarouselSlider
+      {/* <CarouselSlider
         items={carouselItems}
         settings={{
           slidesToShow,
@@ -75,7 +41,7 @@ const ProductsContainer = () => {
             ? "Cargando productos..."
             : "No hay productos disponibles para esta categoría."
         }
-      />
+      /> */}
       <div className="flex items-center justify-center mt-8">
         <h3 className="text-lg font-semibold text-orange-500 flex items-center gap-4 cursor-pointer">
           View All
