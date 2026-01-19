@@ -1,5 +1,5 @@
 import { Star } from "@mui/icons-material";
-import type { Testimonial } from "../../types";
+import type { Testimonial } from "../../../types/testimonial-data";
 
 const TestimonialCard = ({
   backgroundImage,

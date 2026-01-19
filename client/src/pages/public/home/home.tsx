@@ -1,4 +1,9 @@
-import { Hero, WhyChoosing, ProductsContainer, AboutUs, Testimonials } from "../../../components/layout";
+import { Hero } from "../../../components/layout/hero";
+import { WhyChoosing } from "../../../components/layout/choosing";
+import { ProductsContainer } from "../../../components/layout/product-container";
+import { AboutUs } from "../../../components/layout/about";
+import { Testimonials } from "../../../components/layout/testimonials";
+
 
 function Home() {
   return (

@@ -1,7 +1,7 @@
-import experienceImage from "../../assets/about/experience.png";
-import materialsImage from "../../assets/about/materials.png";
-import materials1Image from "../../assets/about/materials-1.png";
-import materials2Image from "../../assets/about/materials-2.png";
+import experienceImage from "../../../assets/about/experience.png";
+import materialsImage from "../../../assets/about/materials.png";
+import materials1Image from "../../../assets/about/materials-1.png";
+import materials2Image from "../../../assets/about/materials-2.png";
 import { ArrowRightAlt } from "@mui/icons-material";
 
 const AboutUs = () => {

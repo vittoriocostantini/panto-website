@@ -1,5 +1,5 @@
 import { Facebook, Twitter, Instagram } from "@mui/icons-material";
-import type { FooterSection, FooterLinkItem } from "../../types/footer";
+import type { FooterSection, FooterLinkItem } from "../../types/footer/footer";
 
 const Footer = () => {
   const companyDescription =

@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { type NotificationType } from "../components/common/notification-toast";
+import { type NotificationType } from "../components/common/toast/notification-toast";
 
 interface Notification {
   id: string;

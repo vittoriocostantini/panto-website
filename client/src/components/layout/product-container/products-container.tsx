@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ArrowRightAlt } from "@mui/icons-material";
-import { AppDispatch, RootState } from "../../redux/store";
-import { fetchAllProducts, setCategory } from "../../redux/slices/product-slice";
-import { CardProducts, CarouselSlider } from "../common";
-import { SelectBarProduct } from "../features/";
-import { useResponsiveSlides } from "../../hooks/use-responsive-slides";
-import { CardSkeletons } from "../layout/skeletons/";
+import { AppDispatch, RootState } from "../../../redux/store";
+import { fetchAllProducts, setCategory } from "../../../redux/slices/product-slice";
+import { CardProducts } from "../../common/card-product";
+import { CarouselSlider } from "../../common/carousel";
+import { SelectBarProduct } from "../../features/";
+import { useResponsiveSlides } from "../../../hooks/use-responsive-slides";
+import { CardSkeletons } from "../../layout/skeletons/";
 const ProductsContainer = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { items, selectedCategory, status } = useSelector((state: RootState) => state.products);

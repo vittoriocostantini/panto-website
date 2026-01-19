@@ -1,7 +1,7 @@
 import { Star, Add } from "@mui/icons-material";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import { useState } from "react";
-import { type CardProductsProps } from "../../types";
+import { type CardProductsProps } from "../../../types/product-model";
 
 
 const CardProducts = ({

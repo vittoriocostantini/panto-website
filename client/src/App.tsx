@@ -1,5 +1,6 @@
 import "./App.css";
-import { Header, Footer } from "./components/layout";
+import { Header } from "./components/layout/header";
+import { Footer } from "./components/layout/footer";
 import { Home, FormUser } from "./pages/public";
 import { Cart } from "./pages/private";
 import { RoutesWithNotFound } from "./utils";

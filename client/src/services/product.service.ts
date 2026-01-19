@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Product } from "../types/product-model";
+import { Product } from "../types/product-model/product-model";
 
 class ProductService {
   private readonly api = axios.create({

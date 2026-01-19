@@ -1,6 +1,6 @@
-import mainOrange from "../../assets/main-principal.png";
-import SearchBar from "./search-bar";
-import mainAlternate from "../../assets/main-principal-movile.png";
+import mainOrange from "../../../assets/main-principal.png";
+import { SearchBar } from "../search-bar/";
+import mainAlternate from "../../../assets/main-principal-movile.png";
 
 function Hero() {
   return (

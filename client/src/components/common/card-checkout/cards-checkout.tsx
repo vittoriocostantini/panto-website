@@ -1,5 +1,5 @@
 import { Delete, Add, Remove } from "@mui/icons-material";
-import { type Product } from "../../types";
+import { type Product } from "../../../types/product-model";
 
 interface CardCheckoutProps {
   product: Product & { quantity: number };

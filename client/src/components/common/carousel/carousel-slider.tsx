@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import Slider, { type Settings } from "react-slick";
-import { ButtonCarousel } from ".";
-import { type CarouselSliderProps } from "../../types";
+import { ButtonCarousel } from "../buttons/";
+import { type CarouselSliderProps } from "../../../types/carousel-slider";
 
 const CarouselSlider = ({
   items,

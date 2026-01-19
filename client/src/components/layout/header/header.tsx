@@ -1,10 +1,10 @@
 import { AccountCircle, LocalMall, Logout } from "@mui/icons-material";
-import logoPanto from "../../assets/logo-panto.png";
+import logoPanto from "../../../assets/logo-panto.png";
 import { Link, useNavigate } from "react-router-dom";
-import { PublicRoutes } from "../../routes";
+import { PublicRoutes } from "../../../routes";
 import { useDispatch, useSelector } from "react-redux"; // Importamos hooks de Redux
-import { RootState, AppDispatch } from "../../redux/store"; // Tipos
-import { logout } from "../../redux/slices/auth-slice";
+import { RootState, AppDispatch } from "../../../redux/store"; // Tipos
+import { logout } from "../../../redux/slices/auth-slice";
 
 const Header: React.FC = () => {
   const navigate = useNavigate();

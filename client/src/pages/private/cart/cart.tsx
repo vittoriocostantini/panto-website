@@ -1,7 +1,7 @@
 import { ShoppingCart, ArrowBack, DoneAll } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { CardCheckout } from "../../../components/common";
+import { CardCheckout } from "../../../components/common/card-checkout";
 import { PublicRoutes } from "../../../routes";
 
 // Mock data temporal para visualizar el frontend

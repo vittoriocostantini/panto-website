@@ -1,5 +1,5 @@
 import { ArrowRightAlt } from "@mui/icons-material";
-import { type ButtonCarouselProps } from "../../types";
+import { type ButtonCarouselProps } from "../../../types/button-carousel";
 
 
 const ButtonCarousel = ({ onClick, direction, ariaLabel }: ButtonCarouselProps) => {

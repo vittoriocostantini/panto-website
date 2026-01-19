@@ -1,15 +1,15 @@
-import review1Image from "../assets/reviews/review-1.png";
-import review2Image from "../assets/reviews/review-2.png";
-import review3Image from "../assets/reviews/review-3.png";
-import review4Image from "../assets/reviews/review-4.jpeg";
-import review5Image from "../assets/reviews/review-5.jpeg";
-import review6Image from "../assets/reviews/review-6.jpeg";
-import profile1Image from "../assets/reviews/avatars/avatar-1.png";
-import profile2Image from "../assets/reviews/avatars/avatar-2.png";
-import profile3Image from "../assets/reviews/avatars/avatar-3.png";
-import profile4Image from "../assets/reviews/avatars/avatar-4.png";
-import profile5Image from "../assets/reviews/avatars/avatar-5.png";
-import profile6Image from "../assets/reviews/avatars/avatar-6.png";
+import review1Image from "../../assets/reviews/review-1.png";
+import review2Image from "../../assets/reviews/review-2.png";
+import review3Image from "../../assets/reviews/review-3.png";
+import review4Image from "../../assets/reviews/review-4.jpeg";
+import review5Image from "../../assets/reviews/review-5.jpeg";
+import review6Image from "../../assets/reviews/review-6.jpeg";
+import profile1Image from "../../assets/reviews/avatars/avatar-1.png";
+import profile2Image from "../../assets/reviews/avatars/avatar-2.png";
+import profile3Image from "../../assets/reviews/avatars/avatar-3.png";
+import profile4Image from "../../assets/reviews/avatars/avatar-4.png";
+import profile5Image from "../../assets/reviews/avatars/avatar-5.png";
+import profile6Image from "../../assets/reviews/avatars/avatar-6.png";
 
 
 export interface Testimonial {

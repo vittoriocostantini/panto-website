@@ -1,9 +1,8 @@
 import * as React from "react";
 import { Box, Tabs, Tab } from "@mui/material";
+import { ProductCategory } from "../../types/product-model";
 
-// ESTE ES EL NUEVO PUNTO DE ORIGEN
-// Tu Slice y tus servicios importarán este tipo de aquí.
-import { ProductCategory } from "../../types";
+
 interface SelectBarProductProps {
   value: ProductCategory;
   onChange: (category: ProductCategory) => void;
