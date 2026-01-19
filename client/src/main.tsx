@@ -4,7 +4,11 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useLayoutEffect } from "react";
-const Wrapper = ({children}: {children: React.ReactNode}) => {
+import { Provider } from "react-redux";
+import {store} from "././redux/store";
+
+
+const Wrapper = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
   useLayoutEffect(() => {
     document.documentElement.scrollTo(0, 0);
@@ -14,9 +18,11 @@ const Wrapper = ({children}: {children: React.ReactNode}) => {
 
 
 createRoot(document.getElementById("root")!).render(
+  <Provider store={store}>
     <BrowserRouter>
-        <Wrapper>
-          <App />
-        </Wrapper>
+      <Wrapper>
+        <App />
+      </Wrapper>
     </BrowserRouter>
+  </Provider>
 );
