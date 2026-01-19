@@ -53,9 +53,8 @@ const Footer = () => {
     <li key={link.label}>
       <a
         href={link.href}
-        className={`text-gray-700 hover:text-gray-900 text-sm transition-colors ${
-          link.icon ? "inline-flex items-center gap-2" : ""
-        }`}
+        className={`text-gray-700 hover:text-gray-900 text-sm transition-colors ${link.icon ? "inline-flex items-center gap-2" : ""
+          }`}
       >
         {link.icon}
         {link.label}

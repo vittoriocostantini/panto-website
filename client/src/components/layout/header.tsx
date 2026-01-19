@@ -1,22 +1,22 @@
 import { AccountCircle, LocalMall, Logout } from "@mui/icons-material";
 import logoPanto from "../../assets/logo-panto.png";
 import { Link, useNavigate } from "react-router-dom";
-// import { useAuth } from "../../context";
 import { PublicRoutes } from "../../routes";
-// import { Badge } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux"; // Importamos hooks de Redux
+import { RootState, AppDispatch } from "../../redux/store"; // Tipos
+import { logout } from "../../redux/slices/auth-slice";
 
 const Header: React.FC = () => {
-  // const { user, logout } = useAuth();
   const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
 
-  // const handleLogout = async () => {
-  //   try {
-  //     await logout();
-  //     navigate(PublicRoutes.HOME);
-  //   } catch (error) {
-  //     console.error("Error al cerrar sesión:", error);
-  //   }
-  // };
+  // Extraemos el usuario del estado global de Redux
+  const { user } = useSelector((state: RootState) => state.auth);
+
+  const handleLogout = () => {
+    dispatch(logout()); // Ejecuta la limpieza de localStorage y estado
+    navigate(PublicRoutes.HOME);
+  };
 
   return (
     <header className="fixed w-full z-11 text-white px-6 py-4 bg-black/20 backdrop-blur-md">
@@ -37,26 +37,31 @@ const Header: React.FC = () => {
             to="/cart"
             className="hover:text-gray-300 cursor-pointer hover:scale-110 transition-all duration-300"
           >
-            {/* <Badge badgeContent={cartCount} color="primary">
-              <LocalMall fontSize="medium" />
-            </Badge> */}
+            <LocalMall fontSize="medium" />
           </Link>
-          {/* {user ? (
-            <button
-              onClick={handleLogout}
-              className="hover:text-gray-300 cursor-pointer hover:scale-110 transition-all duration-300"
-              title="Cerrar sesión"
-            >
-              <Logout fontSize="medium" />
-            </button>
+
+          {/* Renderizado Condicional: Si existe usuario, muestra Logout, si no, Login */}
+          {user ? (
+            <div className="flex items-center gap-4">
+              <span className="text-sm font-medium hidden md:inline">
+                Hola, {user.name}
+              </span>
+              <button
+                onClick={handleLogout}
+                className="hover:text-red-400 cursor-pointer hover:scale-110 transition-all duration-300"
+                title="Cerrar sesión"
+              >
+                <Logout fontSize="medium" />
+              </button>
+            </div>
           ) : (
             <Link
-              to="/auth"
+              to={PublicRoutes.AUTH}
               className="hover:text-gray-300 cursor-pointer hover:scale-110 transition-all duration-300"
             >
               <AccountCircle fontSize="medium" />
             </Link>
-          )} */}
+          )}
         </div>
       </div>
     </header>

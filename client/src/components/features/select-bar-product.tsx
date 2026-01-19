@@ -1,62 +1,38 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import { type ProductCategory } from "../../constants";
-import { type SelectBarProductProps } from "../../types";
+import { Box, Tabs, Tab } from "@mui/material";
+
+// ESTE ES EL NUEVO PUNTO DE ORIGEN
+// Tu Slice y tus servicios importarán este tipo de aquí.
+import { ProductCategory } from "../../types";
+interface SelectBarProductProps {
+  value: ProductCategory;
+  onChange: (category: ProductCategory) => void;
+}
 
 const tabItems: { label: string; value: ProductCategory }[] = [
   { label: "Chair", value: "chair" },
   { label: "Beds", value: "beds" },
   { label: "Sofa", value: "sofa" },
-  { label: "Lamp", value: "lamp" },
+  { label: "Lamp", value: "lamps" },
 ];
 
-const SelectBarProduct = ({ value, onChange }: SelectBarProductProps) => {
-  const handleChange = (
-    _event: React.SyntheticEvent,
-    newValue: ProductCategory
-  ) => {
+const SelectBarProduct: React.FC<SelectBarProductProps> = ({ value, onChange }) => {
+  const handleChange = (_: React.SyntheticEvent, newValue: ProductCategory) => {
     onChange(newValue);
   };
 
   return (
-    <Box
-      sx={{
-        width: { xs: "100%", sm: "370px" },
-        maxWidth: "320px",
-        bgcolor: "#EEEEEE",
-        borderRadius: "100px",
-        padding: "2px",
-        margin: "0 auto",
-      }}
-    >
+    <Box sx={{ width: "100%", maxWidth: "370px", bgcolor: "#EEEEEE", borderRadius: "100px", padding: "4px", margin: "0 auto" }}>
       <Tabs
         value={value}
         onChange={handleChange}
-        centered
+        variant="fullWidth"
         sx={{
+          minHeight: "45px",
           "& .MuiTabs-indicator": {
             height: "100%",
             borderRadius: "100px",
-          },
-          "& .MuiTab-root": {
-            position: "relative",
-            zIndex: 1,
-            transition: "color 0.3s",
-            minWidth: { xs: "80px", sm: "auto" },
-            fontSize: { xs: "0.85rem", sm: ".975rem" },
-            padding: { xs: "6px 12px", sm: "12px 16px" },
-            "&.Mui-selected": {
-              color: "#1E1E1E",
-            },
-          },
-        }}
-        TabIndicatorProps={{
-          sx: {
             backgroundColor: "white",
-            height: "100%",
-            borderRadius: "100px",
             zIndex: 0,
           },
         }}
@@ -67,6 +43,13 @@ const SelectBarProduct = ({ value, onChange }: SelectBarProductProps) => {
             label={tab.label}
             value={tab.value}
             disableRipple
+            sx={{
+              zIndex: 1,
+              textTransform: "none",
+              fontWeight: 500,
+              color: "#7C7C7C",
+              "&.Mui-selected": { color: "#1E1E1E" },
+            }}
           />
         ))}
       </Tabs>

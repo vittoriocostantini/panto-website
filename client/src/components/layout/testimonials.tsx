@@ -1,5 +1,5 @@
 import { TestimonialCard, CarouselSlider } from "../common";
-import { testimonialsData } from "../../constants";
+import { testimonialsData } from "../../types";
 import { useResponsiveSlides } from "../../hooks/use-responsive-slides";
 
 const Testimonials = () => {

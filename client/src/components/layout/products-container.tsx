@@ -1,16 +1,17 @@
-// import { useEffect } from "react";
-// import { CardProducts, CarouselSlider } from "../common";
-// import { SelectBarProduct } from "../features";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { ArrowRightAlt } from "@mui/icons-material";
+import { AppDispatch, RootState } from "../../redux/store";
+import { fetchAllProducts, setCategory } from "../../redux/slices/product-slice";
+import { CardProducts, CarouselSlider } from "../common";
+import { SelectBarProduct } from "../features/";
 import { useResponsiveSlides } from "../../hooks/use-responsive-slides";
-
-
+import { CardSkeletons } from "../layout/skeletons/";
 const ProductsContainer = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const { items, selectedCategory, status } = useSelector((state: RootState) => state.products);
 
-
-
-
-  const {  } = useResponsiveSlides({
+  const { slidesToShow } = useResponsiveSlides({
     initialSlides: 4,
     rules: [
       { maxWidth: 640, slidesToShow: 1 },
@@ -20,33 +21,62 @@ const ProductsContainer = () => {
     fallbackSlides: 4,
   });
 
-  // Fetch productos solo si no están cacheados
+  useEffect(() => {
+    if (status === "idle") {
+      dispatch(fetchAllProducts());
+    }
+  }, [status, dispatch]);
 
+  const filteredItems = items.filter(
+    (p) => p.category.toLowerCase() === selectedCategory.toLowerCase()
+  );
+
+  const renderItems = (): React.ReactNode[] => {
+
+    if (items.length === 0) {
+      return [...Array(slidesToShow)].map((_, index) => (
+        <CardSkeletons key={`skeleton-${index}`} />
+      ));
+    }
+
+    if (filteredItems.length === 0) {
+      return [];
+    }
+
+    return filteredItems.map((product, index) => (
+      <CardProducts key={product._id || index} {...product} />
+    ));
+  };
   return (
     <section className="py-16 gray-gradient-product">
-      <div className="justify-center items-center text-center">
-        <h2 className="text-5xl font-bold mb-4">Best Selling Product</h2>
-        {/* <SelectBarProduct
+      <div className="flex flex-col items-center text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-[#1A1A1A]">
+          Best Selling Product
+        </h2>
+        <SelectBarProduct
           value={selectedCategory}
-          onChange={handleCategoryChange}
-        /> */}
+          onChange={(cat) => dispatch(setCategory(cat))}
+        />
       </div>
-      {/* <CarouselSlider
-        items={carouselItems}
-        settings={{
-          slidesToShow,
-        }}
+
+      <CarouselSlider
+        items={renderItems()}
+        settings={{ slidesToShow }}
         emptyMessage={
-          loading
-            ? "Cargando productos..."
-            : "No hay productos disponibles para esta categoría."
+          status === "succeeded" && filteredItems.length === 0
+            ? "No hay productos en esta categoría."
+            : ""
         }
-      /> */}
-      <div className="flex items-center justify-center mt-8">
-        <h3 className="text-lg font-semibold text-orange-500 flex items-center gap-4 cursor-pointer">
+      />
+
+      <div className="flex items-center justify-center mt-12">
+        <button className="group text-lg font-semibold text-orange-500 flex items-center gap-4 hover:text-orange-600 transition-colors">
           View All
-          <ArrowRightAlt sx={{ fontSize: 30 }} />
-        </h3>
+          <ArrowRightAlt
+            className="group-hover:translate-x-2 transition-transform"
+            sx={{ fontSize: 30 }}
+          />
+        </button>
       </div>
     </section>
   );

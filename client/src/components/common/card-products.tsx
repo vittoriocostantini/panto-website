@@ -3,8 +3,8 @@ import DoneAllIcon from "@mui/icons-material/DoneAll";
 import { useState } from "react";
 import { type CardProductsProps } from "../../types";
 
+
 const CardProducts = ({
-  id,
   category,
   name,
   price,
@@ -17,9 +17,7 @@ const CardProducts = ({
   const handleAddToCart = () => {
     if (onAddToCart && !isAdding) {
       setIsAdding(true);
-      onAddToCart({ id, category, name, price, rating, image });
-
-      // Volver al estado original después de 800ms
+      onAddToCart({ category, name, price, rating, image });
       setTimeout(() => {
         setIsAdding(false);
       }, 800);
@@ -54,11 +52,10 @@ const CardProducts = ({
           <button
             onClick={handleAddToCart}
             disabled={isAdding}
-            className={`w-12 h-12 rounded-full cursor-pointer flex items-center justify-center transition-all ${
-              isAdding
-                ? "bg-green-600 hover:bg-green-700"
-                : "bg-[#1A1A1A] hover:bg-[#323131]"
-            }`}
+            className={`w-12 h-12 rounded-full cursor-pointer flex items-center justify-center transition-all ${isAdding
+              ? "bg-green-600 hover:bg-green-700"
+              : "bg-[#1A1A1A] hover:bg-[#323131]"
+              }`}
             aria-label={isAdding ? "Adding to cart" : "Add to cart"}
           >
             {isAdding ? (
