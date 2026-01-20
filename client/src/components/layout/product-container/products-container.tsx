@@ -3,14 +3,22 @@ import { useDispatch, useSelector } from "react-redux";
 import { ArrowRightAlt } from "@mui/icons-material";
 import { AppDispatch, RootState } from "../../../redux/store";
 import { fetchAllProducts, setCategory } from "../../../redux/slices/product-slice";
+import { addToCartThunk } from "../../../redux/slices/cart-slice";
 import { CardProducts } from "../../common/card-product";
 import { CarouselSlider } from "../../common/carousel";
 import { SelectBarProduct } from "../../features/";
-import { useResponsiveSlides } from "../../../hooks/use-responsive-slides";
 import { CardSkeletons } from "../../layout/skeletons/";
+import { useResponsiveSlides } from "../../../hooks/use-responsive-slides";
+import { type Product } from "../../../types/product-model";
+
 const ProductsContainer = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const { items, selectedCategory, status } = useSelector((state: RootState) => state.products);
+
+  const { items, selectedCategory, status } = useSelector(
+    (state: RootState) => state.products
+  );
+
+  const { user } = useSelector((state: RootState) => state.auth || { user: null });
 
   const { slidesToShow } = useResponsiveSlides({
     initialSlides: 4,
@@ -32,22 +40,51 @@ const ProductsContainer = () => {
     (p) => p.category.toLowerCase() === selectedCategory.toLowerCase()
   );
 
-  const renderItems = (): React.ReactNode[] => {
+  const handleAddToCart = (product: Product) => {
+    console.log("1. Click detectado en Padre. Datos recibidos:", product);
 
-    if (items.length === 0) {
+    const productId = product._id;
+    console.log("2. ID extraído:", productId);
+
+    if (!productId) {
+      console.error("3. ERROR: El producto no tiene un _id válido");
+      return;
+    }
+
+    let guestId = localStorage.getItem("guestId");
+    if (!user && !guestId) {
+      guestId = crypto.randomUUID();
+      localStorage.setItem("guestId", guestId);
+    }
+
+    dispatch(addToCartThunk({
+      productId: productId,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      category: product.category,
+      quantity: 1,
+      userId: user?._id,
+      guestId: !user ? (guestId ?? undefined) : undefined
+    }));
+  };
+
+  const renderItems = (): React.ReactNode[] => {
+    if (status === "loading" || items.length === 0) {
       return [...Array(slidesToShow)].map((_, index) => (
         <CardSkeletons key={`skeleton-${index}`} />
       ));
     }
 
-    if (filteredItems.length === 0) {
-      return [];
-    }
-
-    return filteredItems.map((product, index) => (
-      <CardProducts key={product._id || index} {...product} />
+    return filteredItems.map((product) => (
+      <CardProducts
+        key={product._id}
+        {...product}
+        onAddToCart={handleAddToCart}
+      />
     ));
   };
+
   return (
     <section className="py-16 gray-gradient-product">
       <div className="flex flex-col items-center text-center mb-12">
@@ -71,7 +108,7 @@ const ProductsContainer = () => {
       />
 
       <div className="flex items-center justify-center mt-12">
-        <button className="group text-lg font-semibold text-orange-500 flex items-center gap-4 hover:text-orange-600 transition-colors">
+        <button className="group text-lg font-semibold text-orange-500 flex items-center gap-4 hover:text-orange-600 transition-colors cursor-pointer">
           View All
           <ArrowRightAlt
             className="group-hover:translate-x-2 transition-transform"

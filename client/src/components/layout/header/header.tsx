@@ -1,20 +1,21 @@
 import { AccountCircle, LocalMall, Logout } from "@mui/icons-material";
+import { Badge } from "@mui/material"; //
 import logoPanto from "../../../assets/logo-panto.png";
 import { Link, useNavigate } from "react-router-dom";
 import { PublicRoutes } from "../../../routes";
-import { useDispatch, useSelector } from "react-redux"; // Importamos hooks de Redux
-import { RootState, AppDispatch } from "../../../redux/store"; // Tipos
+import { useDispatch, useSelector } from "react-redux";
+import { RootState, AppDispatch } from "../../../redux/store";
 import { logout } from "../../../redux/slices/auth-slice";
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
-
-  // Extraemos el usuario del estado global de Redux
   const { user } = useSelector((state: RootState) => state.auth);
+  const { items } = useSelector((state: RootState) => state.cart);
+  const cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
 
   const handleLogout = () => {
-    dispatch(logout()); // Ejecuta la limpieza de localStorage y estado
+    dispatch(logout());
     navigate(PublicRoutes.HOME);
   };
 
@@ -37,10 +38,22 @@ const Header: React.FC = () => {
             to="/cart"
             className="hover:text-gray-300 cursor-pointer hover:scale-110 transition-all duration-300"
           >
-            <LocalMall fontSize="medium" />
+            <Badge
+              badgeContent={cartItemCount}
+              color="error" 
+              sx={{
+                "& .MuiBadge-badge": {
+                  right: -3,
+                  top: 3,
+                  border: `2px solid transparent`,
+                  padding: "0 4px",
+                },
+              }}
+            >
+              <LocalMall fontSize="medium" />
+            </Badge>
           </Link>
 
-          {/* Renderizado Condicional: Si existe usuario, muestra Logout, si no, Login */}
           {user ? (
             <div className="flex items-center gap-4">
               <span className="text-sm font-medium hidden md:inline">

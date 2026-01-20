@@ -3,21 +3,24 @@ import DoneAllIcon from "@mui/icons-material/DoneAll";
 import { useState } from "react";
 import { type CardProductsProps } from "../../../types/product-model";
 
+const CardProducts = (props: CardProductsProps) => {
 
-const CardProducts = ({
-  category,
-  name,
-  price,
-  rating,
-  image,
-  onAddToCart,
-}: CardProductsProps) => {
+  const { _id, category, name, price, rating, image, onAddToCart } = props;
   const [isAdding, setIsAdding] = useState(false);
 
   const handleAddToCart = () => {
     if (onAddToCart && !isAdding) {
       setIsAdding(true);
-      onAddToCart({ category, name, price, rating, image });
+
+
+      onAddToCart({
+        _id,
+        category,
+        name,
+        price,
+        rating,
+        image
+      });
       setTimeout(() => {
         setIsAdding(false);
       }, 800);
@@ -25,7 +28,7 @@ const CardProducts = ({
   };
 
   return (
-    <div className="bg-white rounded-2xl overflow-hidden w-[320px] mx-auto">
+    <div className="bg-white rounded-2xl overflow-hidden w-[320px] mx-auto shadow-sm hover:shadow-md transition-shadow">
       <div className="bg-[#F5F5F5] h-64 flex items-center justify-center px-6">
         <img src={image} alt={name} className="w-full h-full object-contain" />
       </div>
@@ -52,11 +55,12 @@ const CardProducts = ({
           <button
             onClick={handleAddToCart}
             disabled={isAdding}
-            className={`w-12 h-12 rounded-full cursor-pointer flex items-center justify-center transition-all ${isAdding
-              ? "bg-green-600 hover:bg-green-700"
-              : "bg-[#1A1A1A] hover:bg-[#323131]"
-              }`}
-            aria-label={isAdding ? "Adding to cart" : "Add to cart"}
+            className={`w-12 h-12 rounded-full cursor-pointer flex items-center justify-center transition-all ${
+              isAdding
+                ? "bg-green-600 hover:bg-green-700"
+                : "bg-[#1A1A1A] hover:bg-[#323131]"
+            }`}
+            aria-label={isAdding ? "Añadido" : "Añadir al carrito"}
           >
             {isAdding ? (
               <DoneAllIcon sx={{ color: "#fff", fontSize: 24 }} />
