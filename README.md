@@ -1,255 +1,287 @@
-# 🛋️ Panto - E-commerce de Muebles e Interiorismo
+
+
+# 🛋️ Panto - Furniture & Interior Design E-commerce
 
 <div align="center">
-
-![Panto](https://img.shields.io/badge/Panto-E--commerce-orange)
-![React](https://img.shields.io/badge/React-19.2-blue)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)
-![Node.js](https://img.shields.io/badge/Node.js-Express-green)
-![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-green)
 
 </div>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/vittoriocostantini/panto-website/main/client/src/assets/main-principal.png" alt="Panto Website Main" width="800">
 </p>
-## 📋 Descripción
 
-Panto es una plataforma de e-commerce moderna y elegante especializada en muebles e interiorismo. Ofrece una experiencia de usuario fluida con un diseño minimalista y contemporáneo, permitiendo a los usuarios explorar, seleccionar y comprar productos de decoración para transformar sus espacios.
+## 📋 Description
 
-## ✨ Características Principales
+Panto is a modern and elegant e-commerce platform specializing in furniture and interior design. It offers a seamless user experience with a minimalist and contemporary design, allowing users to explore, select, and purchase decor products to transform their spaces.
 
-### Frontend
-- 🎨 **Diseño Moderno y Responsive**: Interfaz minimalista adaptada a todos los dispositivos
-- 🛒 **Sistema de Carrito**: Carrito de compras con soporte para usuarios registrados e invitados
-- 🔐 **Autenticación de Usuarios**: Sistema de registro y login seguro con JWT
-- 📦 **Gestión de Productos**: Catálogo completo con búsqueda y filtrado
-- 💳 **Gestión de Órdenes**: Sistema completo de pedidos
-- ⭐ **Testimonios y Reseñas**: Sección dedicada a las opiniones de clientes
-- 🎯 **Guards de Rutas**: Protección de rutas privadas
-- 🔔 **Sistema de Notificaciones**: Toast notifications para feedback al usuario
-
-### Backend
-- 🚀 **API RESTful**: Arquitectura REST completa y escalable
-- 🔒 **Autenticación JWT**: Sistema de autenticación seguro
-- 🗄️ **Base de Datos MongoDB**: Almacenamiento flexible y eficiente
-- 👥 **Gestión de Usuarios**: CRUD completo de usuarios
-- 📦 **Gestión de Productos**: Administración de catálogo
-- 🛒 **Sistema de Carrito**: Gestión de carritos para usuarios e invitados
-- 📋 **Gestión de Órdenes**: Procesamiento y seguimiento de pedidos
-- 🔄 **Patrón Observer**: Implementación de suscriptores para eventos
-
-## 🛠️ Stack Tecnológico
+## ✨ Main Features
 
 ### Frontend
-- **React 19.2**: Biblioteca de UI
-- **TypeScript**: Tipado estático
-- **Vite**: Build tool y dev server
-- **Redux Toolkit**: Gestión de estado global
-- **React Router DOM**: Enrutamiento
-- **Material-UI (MUI)**: Componentes UI
-- **Tailwind CSS**: Estilos utilitarios
-- **Axios**: Cliente HTTP
-- **React Slick**: Carousel/Slider
+
+* 🎨 **Modern & Responsive Design**: Minimalist interface adapted for all devices.
+* 🛒 **Cart System**: Shopping cart with support for both registered users and guests.
+* 🔐 **User Authentication**: Secure registration and login system using JWT.
+* 📦 **Product Management**: Comprehensive catalog with search and filtering capabilities.
+* 💳 **Order Management**: Complete order processing system.
+* ⭐ **Testimonials & Reviews**: Dedicated section for customer feedback.
+* 🎯 **Route Guards**: Protection for private routes.
+* 🔔 **Notification System**: Toast notifications for user feedback.
 
 ### Backend
-- **Node.js**: Runtime de JavaScript
-- **Express 5.2**: Framework web
-- **MongoDB**: Base de datos NoSQL
-- **Mongoose**: ODM para MongoDB
-- **JWT (jsonwebtoken)**: Autenticación
-- **bcryptjs**: Encriptación de contraseñas
-- **CORS**: Manejo de políticas CORS
-- **dotenv**: Variables de entorno
 
-## 📁 Estructura del Proyecto
+* 🚀 **RESTful API**: Full and scalable REST architecture.
+* 🔒 **JWT Authentication**: Secure authentication system.
+* 🗄️ **MongoDB Database**: Flexible and efficient data storage.
+* 👥 **User Management**: Full User CRUD functionality.
+* 📦 **Product Management**: Catalog administration.
+* 🛒 **Cart System**: Cart management for users and guests.
+* 📋 **Order Management**: Order processing and tracking.
+* 🔄 **Observer Pattern**: Implementation of subscribers for events.
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* **React 19.2**: UI Library.
+* **TypeScript**: Static typing.
+* **Vite**: Build tool and dev server.
+* **Redux Toolkit**: Global state management.
+* **React Router DOM**: Routing.
+* **Material-UI (MUI)**: UI components.
+* **Tailwind CSS**: Utility-first styling.
+* **Axios**: HTTP client.
+* **React Slick**: Carousel/Slider.
+
+### Backend
+
+* **Node.js**: JavaScript runtime.
+* **Express 5.2**: Web framework.
+* **MongoDB**: NoSQL database.
+* **Mongoose**: ODM for MongoDB.
+* **JWT (jsonwebtoken)**: Authentication.
+* **bcryptjs**: Password encryption.
+* **CORS**: Cross-Origin Resource Sharing management.
+* **dotenv**: Environment variables.
+
+## 📁 Project Structure
 
 ```
 panto-website/
-├── client/                 # Frontend React/TypeScript
+├── client/                 # React/TypeScript Frontend
 │   ├── src/
-│   │   ├── components/    # Componentes reutilizables
-│   │   │   ├── common/    # Componentes comunes
-│   │   │   ├── features/  # Componentes de funcionalidades
-│   │   │   └── layout/    # Componentes de layout
-│   │   ├── guards/        # Guards de autenticación
-│   │   ├── hooks/         # Custom hooks
-│   │   ├── pages/         # Páginas de la aplicación
-│   │   ├── redux/         # Estado global Redux
-│   │   ├── routes/        # Configuración de rutas
-│   │   ├── services/      # Servicios API
-│   │   ├── types/         # Tipos TypeScript
-│   │   └── utils/         # Utilidades
+│   │   ├── components/     # Reusable components
+│   │   │   ├── common/     # Common components
+│   │   │   ├── features/   # Feature-based components
+│   │   │   └── layout/     # Layout components
+│   │   ├── guards/         # Authentication guards
+│   │   ├── hooks/          # Custom hooks
+│   │   ├── pages/          # Application pages
+│   │   ├── redux/          # Redux global state
+│   │   ├── routes/         # Route configuration
+│   │   ├── services/       # API services
+│   │   ├── types/          # TypeScript types
+│   │   └── utils/          # Utilities
 │   └── ...
-├── backend/               # Backend Node.js/Express
+├── backend/                # Node.js/Express Backend
 │   ├── src/
-│   │   ├── config/       # Configuración (DB, etc.)
-│   │   ├── controllers/  # Controladores
-│   │   ├── middleware/   # Middlewares (auth, etc.)
-│   │   ├── models/       # Modelos de Mongoose
-│   │   ├── routes/       # Rutas de la API
-│   │   ├── services/     # Lógica de negocio
-│   │   ├── subscriber/   # Observers/Subscribers
-│   │   └── utils/        # Utilidades
-│   └── server.js         # Punto de entrada del servidor
+│   │   ├── config/         # Configuration (DB, etc.)
+│   │   ├── controllers/    # Controllers
+│   │   ├── middleware/     # Middlewares (auth, etc.)
+│   │   ├── models/         # Mongoose models
+│   │   ├── routes/         # API routes
+│   │   ├── services/       # Business logic
+│   │   ├── subscriber/     # Observers/Subscribers
+│   │   └── utils/          # Utilities
+│   └── server.js           # Server entry point
 └── ...
+
 ```
 
-## 🚀 Instalación y Configuración
+## 🚀 Installation & Setup
 
-### Prerrequisitos
+### Prerequisites
 
-- Node.js (v18 o superior)
-- npm o yarn
-- MongoDB (local o MongoDB Atlas)
+* Node.js (v18 or higher)
+* npm or yarn
+* MongoDB (Local or MongoDB Atlas)
 
-### Instalación
+### Installation
 
-1. **Clonar el repositorio**
+1. **Clone the repository**
+
 ```bash
 git clone <repository-url>
 cd panto-website
+
 ```
 
-2. **Instalar dependencias del frontend**
+2. **Install frontend dependencies**
+
 ```bash
 cd client
 npm install
+
 ```
 
-3. **Instalar dependencias del backend**
+3. **Install backend dependencies**
+
 ```bash
 cd ../backend
 npm install
+
 ```
 
-4. **Configurar variables de entorno**
+4. **Configure environment variables**
 
-Crear un archivo `.env` en la raíz del proyecto `backend/`:
+Create a `.env` file in the `backend/` root directory:
 
 ```env
 PORT=3000
 MONGODB_URI=mongodb://localhost:27017/panto
-# o para MongoDB Atlas:
+# Or for MongoDB Atlas:
 # MONGODB_URI=mongodb+srv://user:password@cluster.mongodb.net/panto
-JWT_SECRET=tu_secret_key_muy_segura
+JWT_SECRET=your_very_secure_secret_key
+
 ```
 
-5. **Iniciar MongoDB**
+5. **Start MongoDB**
+
 ```bash
-# Si usas MongoDB local
+# If using local MongoDB
 mongod
+
 ```
 
-## 🎯 Uso
+## 🎯 Usage
 
-### Desarrollo
+### Development
 
-**Iniciar el backend:**
+**Start the backend:**
+
 ```bash
 cd backend
 npm run dev
-```
-El servidor se ejecutará en `http://localhost:3000`
 
-**Iniciar el frontend:**
+```
+
+The server will run at `http://localhost:3000`
+
+**Start the frontend:**
+
 ```bash
 cd client
 npm run dev
+
 ```
-La aplicación se ejecutará en `http://localhost:5173` (o el puerto que asigne Vite)
 
-### Producción
+The application will run at `http://localhost:5173` (or the port assigned by Vite)
 
-**Build del frontend:**
+### Production
+
+**Frontend Build:**
+
 ```bash
 cd client
 npm run build
+
 ```
 
-**Preview del build:**
+**Preview Build:**
+
 ```bash
 npm run preview
+
 ```
 
-**Ejecutar el backend en producción:**
+**Run Backend in Production:**
+
 ```bash
 cd backend
 node server.js
+
 ```
 
-## 🔌 Endpoints de la API
+## 🔌 API Endpoints
 
-### Autenticación
-- `POST /api/users/register` - Registro de usuario
-- `POST /api/users/login` - Inicio de sesión
+### Authentication
 
-### Productos
-- `GET /api/products` - Obtener todos los productos
-- `GET /api/products/:id` - Obtener un producto por ID
-- `POST /api/products` - Crear producto (requiere auth)
-- `PUT /api/products/:id` - Actualizar producto (requiere auth)
-- `DELETE /api/products/:id` - Eliminar producto (requiere auth)
+* `POST /api/users/register` - User registration
+* `POST /api/users/login` - User login
 
-### Carrito
-- `GET /api/cart/:userId` - Obtener carrito del usuario
-- `POST /api/cart` - Agregar producto al carrito
-- `PUT /api/cart/:cartId` - Actualizar carrito
-- `DELETE /api/cart/:cartId` - Eliminar carrito
+### Products
 
-### Órdenes
-- `GET /api/orders` - Obtener todas las órdenes (requiere auth)
-- `GET /api/orders/:id` - Obtener una orden por ID (requiere auth)
-- `POST /api/orders` - Crear una nueva orden (requiere auth)
+* `GET /api/products` - Get all products
+* `GET /api/products/:id` - Get product by ID
+* `POST /api/products` - Create product (requires auth)
+* `PUT /api/products/:id` - Update product (requires auth)
+* `DELETE /api/products/:id` - Delete product (requires auth)
 
-### Usuarios
-- `GET /api/users/:id` - Obtener usuario por ID (requiere auth)
-- `PUT /api/users/:id` - Actualizar usuario (requiere auth)
+### Cart
 
-## 🔐 Seguridad
+* `GET /api/cart/:userId` - Get user's cart
+* `POST /api/cart` - Add product to cart
+* `PUT /api/cart/:cartId` - Update cart
+* `DELETE /api/cart/:cartId` - Delete cart
 
-- Contraseñas encriptadas con bcryptjs
-- Autenticación JWT para rutas protegidas
-- Middleware de autenticación en endpoints sensibles
-- CORS configurado para seguridad
-- Variables de entorno para información sensible
+### Orders
 
-## 🎨 Diseño y UI
+* `GET /api/orders` - Get all orders (requires auth)
+* `GET /api/orders/:id` - Get order by ID (requires auth)
+* `POST /api/orders` - Create a new order (requires auth)
 
-La aplicación cuenta con un diseño moderno y minimalista que incluye:
+### Users
 
-- **Hero Section**: Imagen principal con call-to-action
-- **Why Choosing Us**: Sección de características destacadas
-- **Productos**: Catálogo con cards interactivas
-- **About Us**: Información sobre la empresa
-- **Testimonios**: Reseñas de clientes con carrusel
-- **Header y Footer**: Navegación y enlaces importantes
+* `GET /api/users/:id` - Get user by ID (requires auth)
+* `PUT /api/users/:id` - Update user (requires auth)
 
-## 📝 Scripts Disponibles
+## 🔐 Security
+
+* Passwords encrypted with **bcryptjs**.
+* **JWT Authentication** for protected routes.
+* Authentication middleware on sensitive endpoints.
+* **CORS** configured for security.
+* Environment variables for sensitive information.
+
+## 🎨 Design & UI
+
+The application features a modern and minimalist design including:
+
+* **Hero Section**: Main image with a call-to-action.
+* **Why Choose Us**: Highlighted features section.
+* **Products**: Catalog with interactive cards.
+* **About Us**: Company information.
+* **Testimonials**: Customer reviews with carousel.
+* **Header & Footer**: Navigation and important links.
+
+## 📝 Available Scripts
 
 ### Frontend
-- `npm run dev` - Inicia el servidor de desarrollo
-- `npm run build` - Construye la aplicación para producción
-- `npm run preview` - Previsualiza el build de producción
-- `npm run lint` - Ejecuta el linter
+
+* `npm run dev`: Starts the development server.
+* `npm run build`: Builds the app for production.
+* `npm run preview`: Previews the production build.
+* `npm run lint`: Runs the linter.
 
 ### Backend
-- `npm run dev` - Inicia el servidor con nodemon
 
+* `npm run dev`: Starts the server with nodemon.
 
+## 📄 License
 
-## 📄 Licencia
+This project is private. All rights reserved.
 
-Este proyecto es privado. Todos los derechos reservados.
+## 👥 Author
 
-## 👥 Autor
-
-Desarrollado con ❤️ para Panto
+Developed with ❤️ for Panto
 
 ---
 
 <div align="center">
-  Hecho con React, TypeScript, Node.js y MongoDB
+Made with React, TypeScript, Node.js, and MongoDB
+</div>
+
+---
+
 </div>
 
 
