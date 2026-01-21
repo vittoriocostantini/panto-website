@@ -10,6 +10,9 @@
 
 </div>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vittoriocostantini/panto-website/main/client/src/assets/main-principal.png" alt="Panto Website Main" width="800">
+</p>
 ## 📋 Descripción
 
 Panto es una plataforma de e-commerce moderna y elegante especializada en muebles e interiorismo. Ofrece una experiencia de usuario fluida con un diseño minimalista y contemporáneo, permitiendo a los usuarios explorar, seleccionar y comprar productos de decoración para transformar sus espacios.
